@@ -4,20 +4,12 @@
 ## TODO  
 
 **Team**  
-1. Ensure all members are connected to GitHub repository and functions:  
-    1. commit  
-    2. push  
-    3. pull  
-    4. merge  
+1. Ensure all members are connected to GitHub repository and functions: commit, push, pull and merg    
   
 **SQL**  
 1. Ensure all members are using mySQL Workbench and can create a local instance of a database for personal use  
 2. Update access sheet with at least 10 records on each table  
-3. Implement views based on these types of users:  
-    1. admin  
-    2. branch employee  
-    3. delivery driver  
-    4. customer  
+3. Implement views based on these types of users: admin, branch employee, delivery driver and customer 
 4. Create at least four(4) **advanced queries** for the database to perform utilising SQL commands learned in lectures **8 &amp; 9**   
 
 **PHP**  
