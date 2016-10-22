@@ -4,8 +4,8 @@
 ## TODO  
 
 **Team**  
-1. Ensure all members are connected to GitHub repository and functions: commit, push, pull and merg    
-  
+1. Ensure all members are connected to GitHub repository and functions: commit, push, pull and merge  
+
 **SQL**  
 1. Ensure all members are using mySQL Workbench and can create a local instance of a database for personal use  
 2. Update access sheet with at least 10 records on each table  
