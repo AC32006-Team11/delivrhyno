@@ -14,7 +14,7 @@
 
 **PHP**  
 1. Create folder structure for project  
-2. Import any existing assets into project  
+2. Import any existing assets into project (i.e. frameworks and images)  
 3. Create base relational database template (i.e. establishing database connection)  
 
 **Report**  
