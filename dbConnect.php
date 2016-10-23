@@ -9,10 +9,10 @@
     echo "Starting connection...<br>";
 
     // Connect to database
-    $db = mysql_connect("localhost", "root", "");
+    $db = mysql_connect("", "", "");
 
     // Select database
-    mysql_select_db("delivrhyno");
+    mysql_select_db("");
 
     if(!$db) {
         echo mysql_error();
