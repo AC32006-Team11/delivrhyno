@@ -9,7 +9,7 @@
     echo "Starting connection...<br>";
 
     // Connect to database
-    $db = mysql_connect("", "", "");
+    $db = mysql_connect("localhost", "root", "");
 
     // Select database
     mysql_select_db("delivrhyno");
