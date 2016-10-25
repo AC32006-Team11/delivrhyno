@@ -9,15 +9,14 @@
     echo "Starting connection...<br>";
 
     // Connect to database
-    $db = mysql_connect("", "", "");
+    $db = mysqli_connect("", "", "");
 
     // Select database
-    mysql_select_db("");
+    mysqli_select_db($db, "");
 
-    if(!$db) {
-        echo mysql_error();
+    if ($db->connect_error) {
+        die("Connection failed: " . $db->connect_error);
     }
-    else {
-        echo "Successfully connected. <br>";
-    }
+
+    echo "Connected successfully";
 ?>
