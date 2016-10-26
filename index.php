@@ -7,6 +7,4 @@
  */
 
     include 'dbConnect.php';
-
-
 ?>
