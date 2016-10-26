@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Anthony
- * Date: 23/10/2016
- * Time: 16:38
- */
-
     echo "Starting connection...<br>";
 
     // Connect to database
