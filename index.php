@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <img class="heading_image" src="http://i.imgur.com/u2faNu3.png" alt="delivrhyno">
+                    <img class="heading_image" src="assets/bw_rhino.png" alt="delivrhyno">
                 </div>
                 <div class="col-md-10">
                     <h1 class="heading">Delivrhyno</h1>
@@ -27,8 +27,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-2"></div>
-                <div class="col-md-10">
+                <div class="col-md-12">
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <div class="navbar-header">
