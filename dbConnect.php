@@ -1,6 +1,4 @@
 <?php
-    echo "Starting connection...<br>";
-
     // Connect to database
     $db = mysqli_connect("silva.computing.dundee.ac.uk", "anthonygrimes", "AC32006");
 
@@ -10,6 +8,5 @@
     if ($db->connect_error) {
         die("Connection failed: " . $db->connect_error);
     }
-
-    echo "Connected successfully";
+    echo "";
 ?>

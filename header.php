@@ -1,4 +1,4 @@
-<?php ?>
+<?php include 'dbConnect.php';?>
 
 <!DOCTYPE html>
 
