@@ -1,12 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Anthony
- * Date: 22/10/2016
- * Time: 01:42
- */
+<?php include 'header.php';?>
 
-    include 'dbConnect.php';
+<p>This is a paragraph</p>
 
-
-?>
+<?php include 'footer.php';?>
