@@ -6,7 +6,8 @@ function registerUser() {
     include 'dbConnect.php';
 
     $username = $_POST["username"];
-    $password = $_POST["password"];
+    $passwordInsecure = $_POST["password"];
+    $password = sha1($passwordInsecure);
     $title = $_POST["title"];
     $forename = $_POST["forename"];
     $surname = $_POST["surname"];
