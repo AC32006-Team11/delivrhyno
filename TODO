@@ -1,0 +1,8 @@
+Bugs:
+1. when navigating to registerUser.php will create a row of null values in the database
+
+Features:
+1. Login page with sessions across pages
+2. Password salting
+3. Prepared statements in register/login
+4. Profile page for customers
