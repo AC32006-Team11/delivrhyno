@@ -23,7 +23,10 @@ function registerUser() {
 
     $query = mysqli_query($db, $sqlCommand);
 }
+
+if (isset($_POST["register"])) {
     registerUser();
+}
 ?>
 
 <h1>
