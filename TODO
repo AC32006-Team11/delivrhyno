@@ -1,8 +1,6 @@
 Bugs:
-1. login doesn't login users with hashed passwords as it doesn't check hashes
 
 Features:
-1. Login page with sessions across pages
 2. Password salting
 3. Prepared statements in register/login
 4. Profile page for customers

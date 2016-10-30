@@ -1,5 +1,6 @@
+<?php include 'header.php';?>
+
 <?php
-session_start();
 include('dbConnect.php');
 
 if (isset($_POST['username']) and isset($_POST['password'])){
@@ -14,8 +15,10 @@ if (isset($_POST['username']) and isset($_POST['password'])){
     $count = mysqli_num_rows($result);
 
     if ($count == 1){
+        $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
         echo "Valid Login Credentials.";
+        echo '<meta http-equiv=\"refresh\" content=\"3; url=index.php\">';
     }else{
 
         echo "Invalid Login Credentials.";
