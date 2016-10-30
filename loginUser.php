@@ -19,7 +19,6 @@ if (isset($_POST['username']) and isset($_POST['password'])){
         $_SESSION['username'] = $username;
         echo "Valid Login Credentials.";
     }else{
-
         echo "Invalid Login Credentials.";
     }
 }

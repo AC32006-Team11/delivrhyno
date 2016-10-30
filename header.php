@@ -1,7 +1,5 @@
 <?php include 'dbConnect.php'; ?>
-<?php
-session_start();
-?>
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 
@@ -40,7 +38,7 @@ session_start();
                     </div>
 
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">About Us</a></li>
+                        <li class="active"><a href="aboutUs.php">About Us</a></li>
                         <li><a href=".#">Restaurants</a></li>
                         <?php
                         if ( isset($_SESSION["loggedIn"]) == "loggedIn") {
