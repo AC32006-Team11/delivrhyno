@@ -27,10 +27,10 @@ function registerUser() {
 
 if (isset($_POST["register"])) {
     registerUser();
+
+    echo '<h1>Thanks for registering!</h1>';
 }
 ?>
 
-<h1>
-    Thanks for registering!
-</h1>
+
 <?php include 'footer.php'; ?>

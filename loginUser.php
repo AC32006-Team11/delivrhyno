@@ -18,10 +18,11 @@ if (isset($_POST['username']) and isset($_POST['password'])){
         $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
         echo "Valid Login Credentials.";
-        echo '<meta http-equiv=\"refresh\" content=\"3; url=index.php\">';
     }else{
 
         echo "Invalid Login Credentials.";
     }
 }
 ?>
+
+<?php include 'footer.php'; ?>
