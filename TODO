@@ -1,7 +1,11 @@
+Currently Working On:
+1. Extending user profile to display all user information
+    1.1 Allow user to edit user profile information
+    1.2 Allow user to delete profile/account
+
 Bugs:
 1. Possible session issues and code redundancy
 
-Features:
+Upcoming To Do:
 1. Password salting
 2. Prepared statements in register/login
-3. Profile page for customers
