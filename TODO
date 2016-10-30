@@ -1,6 +1,7 @@
 Bugs:
+1. Possible session issues and code redundancy
 
 Features:
-2. Password salting
-3. Prepared statements in register/login
-4. Profile page for customers
+1. Password salting
+2. Prepared statements in register/login
+3. Profile page for customers
