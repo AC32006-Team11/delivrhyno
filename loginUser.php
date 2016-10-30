@@ -5,7 +5,8 @@ include('dbConnect.php');
 if (isset($_POST['username']) and isset($_POST['password'])){
 
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $passwordInsecure = $_POST["password"];
+    $password = sha1($passwordInsecure);
 
     $query = "SELECT * FROM `customer` WHERE username='$username' and password='$password'";
 
