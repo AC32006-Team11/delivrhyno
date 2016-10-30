@@ -1,0 +1,6 @@
+Bugs:
+
+Features:
+2. Password salting
+3. Prepared statements in register/login
+4. Profile page for customers
