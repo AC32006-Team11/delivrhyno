@@ -15,9 +15,10 @@ if (isset($_POST['username']) and isset($_POST['password'])){
 
     if ($count == 1){
         $_SESSION['username'] = $username;
+        echo "Valid Login Credentials.";
     }else{
 
-        $fmsg = "Invalid Login Credentials.";
+        echo "Invalid Login Credentials.";
     }
 }
 ?>
