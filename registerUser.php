@@ -20,9 +20,9 @@ function registerUser() {
     $contact_email = $_POST["contact_email"];
 
 
-    $sqlCommand = "INSERT INTO customer(title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, username, password) VALUES ('$title', '$forename', '$surname', '$street', '$county', '$city', '$post_code', '$contact_phone_region', '$contact_phone', '$contact_email', '$username', '$password')";
+    $query = "INSERT INTO customer(title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, username, password) VALUES ('$title', '$forename', '$surname', '$street', '$county', '$city', '$post_code', '$contact_phone_region', '$contact_phone', '$contact_email', '$username', '$password')";
 
-    $query = mysqli_query($db, $sqlCommand);
+    $result = mysqli_query($db, $query) or die(mysqli_error($db));
 }
 
 if (isset($_POST["register"])) {
