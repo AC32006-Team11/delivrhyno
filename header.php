@@ -49,7 +49,7 @@
 
                     <?php
                     if ( isset($_SESSION["loggedIn"]) == "loggedIn") {
-                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="logoutUser.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
+                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="userLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
                     } else {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Register</a></li> <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> </ul>';
                     }
