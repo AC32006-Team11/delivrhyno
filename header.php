@@ -24,6 +24,7 @@
         <div class="col-md-2">
             <img class="heading_image" src="assets/bw_rhino.png" alt="delivrhyno">
         </div>
+
         <div class="col-md-10">
             <h1 class="heading">Delivrhyno</h1>
         </div>
@@ -41,14 +42,15 @@
                         <li class="active"><a href="aboutUs.php">About Us</a></li>
                         <li><a href="restaurantSelection.php">Restaurants</a></li>
                         <?php
-                        if ( isset($_SESSION["loggedIn"]) == "loggedIn") {
+                        if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                             echo '<li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
-                        } else {}
+                        } else {
+                        }
                         ?>
                     </ul>
 
                     <?php
-                    if ( isset($_SESSION["loggedIn"]) == "loggedIn") {
+                    if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="userLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
                     } else {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Register</a></li> <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> </ul>';
