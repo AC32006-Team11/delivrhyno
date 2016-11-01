@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-6">
             <h2>Welcome to delivrhyno</h2>
-            <p>INSERT TEXT HERE CRAIG</p>
+            <p>INSERT TEXT HERE test2</p>
         </div>
     </div>
 </div>
