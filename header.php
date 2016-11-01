@@ -22,7 +22,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-2">
-            <img class="heading_image" src="assets/bw_rhino.png" alt="delivrhyno">
+            <img class="heading_image img-fluid" src="assets/bw_rhino.png" alt="delivrhyno">
         </div>
         <div class="col-md-10">
             <h1 class="heading">Delivrhyno</h1>
@@ -42,7 +42,7 @@
                         <li><a href="restaurantSelection.php">Restaurants</a></li>
                         <?php
                         if ( isset($_SESSION["loggedIn"]) == "loggedIn") {
-                            echo '<li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
+                            echo '<li><a href="userAccount.php">Your Account</a></li> <li><a href="userOrder.php">Your Orders</a></li>';
                         } else {}
                         ?>
                     </ul>
