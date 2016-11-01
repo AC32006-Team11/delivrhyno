@@ -1,5 +1,6 @@
 <?php include 'header.php'; ?>
 
+<?php if (isset($_SESSION["loggedIn"]) == "loggedIn") { ?>
 <div class="container">
     <div class="col-md-4">
         <h2>Please enter the details you wish to update</h2>
@@ -99,5 +100,9 @@
             </div>
         </fieldset>
     </form>
+
+    <?php } else {
+        echo '<h2>No User Found</h2>';
+    } ?>
 
     <?php include 'footer.php'; ?>
