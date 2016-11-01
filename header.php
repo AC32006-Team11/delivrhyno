@@ -19,16 +19,18 @@
 </head>
 
 <body>
+<br>
 <div class="container">
+
     <div class="row">
         <div class="col-md-2">
             <img class="heading_image" src="assets/bw_rhino.png" alt="delivrhyno">
         </div>
-        <div class="col-md-10">
-            <h1 class="heading">Delivrhyno</h1>
-        </div>
+        <div class="col-md-10 col">
+            <h1 class="heading">  Delivrhyno</h1>
+        </div>	
     </div>
-
+	<br>
     <div class="row">
         <div class="col-md-12">
             <nav class="navbar navbar-default">
