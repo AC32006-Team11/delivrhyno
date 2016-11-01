@@ -7,6 +7,3 @@
     size: auto;
 }
 
-div[thumbnail].hover{
-    background-color: darkgray;
-}
