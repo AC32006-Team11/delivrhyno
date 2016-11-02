@@ -18,17 +18,6 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     if ($count == 1) {
         $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
-        $_SESSION['title'] = $row[1];
-        $_SESSION['forename'] = $row[2];
-        $_SESSION['surname'] = $row[3];
-        $_SESSION['street'] = $row[4];
-        $_SESSION['county'] = $row[5];
-        $_SESSION['city'] = $row[6];
-        $_SESSION['post_code'] = $row[7];
-        $_SESSION['contact_phone_region'] = $row[8];
-        $_SESSION['contact_phone'] = $row[9];
-        $_SESSION['contact_email'] = $row[10];
-
         echo "Valid Login Credentials.";
     }
 } else {

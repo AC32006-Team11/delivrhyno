@@ -75,7 +75,7 @@ if (isset($_POST["UpdateAccount"])) {
     '<div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Thanks for updating your details! <small>Please log-in again to see updated fields</small></h1>
+                    <h1>Thanks for updating your details!</h1>
                 </div>
             </div>
         </div>';
