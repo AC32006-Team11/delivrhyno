@@ -8,7 +8,7 @@ if (isset($_POST['username']) and isset($_POST['password'])){
     $username = $_POST['username'];
     $passwordInsecure = $_POST["password"];
     $password = sha1($passwordInsecure);
-
+    //SQL injection!mental note---------
     $query = "SELECT * FROM `customer` WHERE username='$username' and password='$password'";
 
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
