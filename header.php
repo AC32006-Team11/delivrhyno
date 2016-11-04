@@ -45,7 +45,10 @@
                         <?php
                         if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                             echo '<li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
+                        } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
+                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">Delivrhyno Database</a></li>';
                         } else {
+
                         }
                         ?>
                     </ul>
@@ -53,6 +56,8 @@
                     <?php
                     if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="userLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
+                    } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
+                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="employeeLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
                     } else {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Register</a></li> <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> </ul>';
                     }
