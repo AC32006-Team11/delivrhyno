@@ -11,7 +11,7 @@
 				<p>Use the dropdown box below to select the method that you would like to complete the payment with.</p>
 				<br>
 				<br>
-				<form method="POST" action="" class="form-horizontal">				
+				<form method="POST" action="orderConfirmation.php" class="form-horizontal">				
 				<div class="dropdown">
 					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Payment Method
 					<span class="caret"></span></button>
