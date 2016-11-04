@@ -1,0 +1,34 @@
+Customer:
+-- View/Create Order
+    - Customer order should follow this workflow when creating an order:
+        - User select "Order from delivrhyno" from nav
+        - Server Displays restaurants in their area
+        - User selects restaurant
+        - User selects menu item(s) and adds to basket
+        - User confirms basket contents and select payment method
+        - Server creates a order transaction and saves in database
+        - Server displays order summary to customer
+
+-- View previous orders
+    - Customer should be able to view all and search orders that have status = Delivered
+
+--View/Edit Account
+
+Employee HR:
+-- View/Edit Account
+
+-- Search for employees at their branch
+
+-- Update employee holidays ONLY
+
+Employee DVR:
+-- View/Edit Account
+
+-- Search for orders assigned to their branch
+
+-- Update order status ONLY [Preparing | Out for Delivery | Delivered]
+
+Admin:
+-- View/Edit Account
+
+-- FUCKING LOADS MATE
