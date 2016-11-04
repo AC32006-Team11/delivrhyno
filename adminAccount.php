@@ -4,8 +4,8 @@
 <?php
 
 //insert into anthonygrimesdb.employee(branch_id, role, title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, holiday_entitlement, username, password) VALUES ('', '','','','','','','','','','','','','','')
-if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
-    $query = "SELECT * FROM `employee` WHERE '$_SESSION[username]' = username and role = 'HR' OR role = 'DVR'";
+if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
+    $query = "SELECT * FROM `employee` WHERE '$_SESSION[username]' = username and role = 'ADM'";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
@@ -32,7 +32,7 @@ if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
             <div class="col-md-8">
                 <h2>Welcome back <?php echo "$_SESSION[username]"; ?></h2>
                 <h4>Your Details:
-                    <small><a href="employeeAccountEdit.php">Edit your account details</a></small>
+                    <small><a href="adminAccountEdit.php">Edit your account details</a></small>
                 </h4>
                 <br>
                 <ul style="list-style-type:none">

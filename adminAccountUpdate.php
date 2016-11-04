@@ -16,7 +16,6 @@
     $contact_phone = $_POST["contact_phone"];
     $contact_email = $_POST["contact_email"];
 
-
     if (!empty($title)) {
         $query = "UPDATE `employee` SET title = '$title' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));

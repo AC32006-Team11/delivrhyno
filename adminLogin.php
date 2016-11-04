@@ -11,14 +11,14 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     $passwordInsecure = $_POST["password"];
     $password = sha1($passwordInsecure);
 
-    $query = "SELECT * FROM `employee` WHERE username = '$username' and password='$password' and role = 'HR' OR role ='DVR'";
+    $query = "SELECT * FROM `employee` WHERE username = '$username' and password = '$password' and role = 'ADM'";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
 
     $count = mysqli_num_rows($result);
     if ($count == 1) {
-        $_SESSION['empLoggedIn'] = "empLoggedIn";
+        $_SESSION['admLoggedIn'] = "admLoggedIn";
         $_SESSION['username'] = $username;
         echo "Valid Login Credentials.";
     }
