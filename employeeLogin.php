@@ -11,7 +11,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     $passwordInsecure = $_POST["password"];
     $password = sha1($passwordInsecure);
 
-    $query = "SELECT * FROM `employee` WHERE username = '$username' and password='$password'";
+    $query = "SELECT * FROM `employee` WHERE username = '$username' and password='$password' and role = 'HR' OR role ='DVR'";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
