@@ -9,6 +9,7 @@
 //$sqlGetRestInfo = "SELECT FROM craigwattdb.restaurant"
 //$result = mysqli_query($db, $sqlquery) or die(mysqli_error($db));
 //$result = mysqli_query($db, $sqlquery) or die(mysqli_error($db));
+//hellloooooooo
 ?>
 
 
