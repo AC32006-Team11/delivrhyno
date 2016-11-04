@@ -24,6 +24,7 @@ if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
         $_SESSION['contact_phone_region'] = $row[10];
         $_SESSION['contact_phone'] = $row[11];
         $_SESSION['contact_email'] = $row[12];
+        $_SESSION['holiday_entitlement'] = $row[13];
     }
 
     ?>
@@ -51,6 +52,8 @@ if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
                             is: </b><?php echo "+ $_SESSION[contact_phone_region] $_SESSION[contact_phone]" ?> </li>
                     <br>
                     <li><b>Your contact email is: </b><?php echo "$_SESSION[contact_email]" ?> </li>
+                    <br>
+                    <li><b>You have </b><?php echo "$_SESSION[holiday_entitlement]" ?><b> days of holiday remaining</b></li>
                 </ul>
             </div>
             <div class="col-md-4"></div>
