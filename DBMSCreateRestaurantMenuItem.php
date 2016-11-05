@@ -2,7 +2,7 @@
 
 <?php
 
-function updateMenu() {
+function updateRestaurantMenuItem() {
 
     include 'dbConnect.php';
 
@@ -18,8 +18,8 @@ function updateMenu() {
     echo '<h1>Item Added</h1>';
 }
 
-if (isset($_POST["register"])) {
-    updateMenu();
+if (isset($_POST["create_restaurant_menu_item"])) {
+    updateRestaurantMenuItem();
 }
 ?>
 

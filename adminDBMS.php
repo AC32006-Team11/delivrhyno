@@ -32,9 +32,9 @@
                         <td><a href=""></a></td>
                     </tr>
                     <tr>
-                        <td><a href="adminDBMSCreateRestaurantMenuItems.php">Restaurant Menu Items</a></td>
+                        <td><a href="adminDBMSCreateRestaurantMenuItem.php">Restaurant Menu Items</a></td>
                         <td><a href=""></a></td>
-                        <td><a href="adminDBMSUpdateRestaurantMenuItems.php">Restaurant Menu Items</a></td>
+                        <td><a href="adminDBMSUpdateRestaurantMenuItem.php">Restaurant Menu Items</a></td>
                         <td><a href=""></a></td>
                     </tr>
                     </tbody>

@@ -2,7 +2,7 @@
 
 <?php
 
-function registerRestaurant() {
+function createRestaurant() {
 
     include 'dbConnect.php';
 
@@ -23,8 +23,8 @@ function registerRestaurant() {
     echo '<h1>Restaurant Registered</h1>';
 }
 
-if (isset($_POST["register"])) {
-    registerRestaurant();
+if (isset($_POST["create_restaurant"])) {
+    createRestaurant();
 }
 ?>
 
