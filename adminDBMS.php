@@ -32,9 +32,9 @@
                         <td><a href=""></a></td>
                     </tr>
                     <tr>
-                        <td><a href="adminDBMSCreateRestaurantMenuItem.php">Restaurant Menu Items</a></td>
+                        <td><a href="adminDBMSCreateRestaurantMenuItem.php">Restaurant Menu Item</a></td>
                         <td><a href=""></a></td>
-                        <td><a href="adminDBMSUpdateRestaurantMenuItem.php">Restaurant Menu Items</a></td>
+                        <td><a href="adminDBMSUpdateRestaurantMenuItem.php">Restaurant Menu Item</a></td>
                         <td><a href=""></a></td>
                     </tr>
                     </tbody>
@@ -47,7 +47,7 @@
                 <table class="table">
                     <thead>
                     <tr>
-                        <th>Advanced SQL Options</th>
+                        <th>Advanced mySQL Functions</th>
                     </tr>
                     </thead>
                     <tbody>
