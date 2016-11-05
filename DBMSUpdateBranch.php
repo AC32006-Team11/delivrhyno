@@ -14,32 +14,32 @@
     $contact_phone = $_POST["contact_phone"];
 
     if (!empty($street)) {
-        $query = "UPDATE `employee` SET street = '$street' WHERE branch_id = '$branchID'";
+        $query = "UPDATE `branch` SET street = '$street' WHERE branch_id = '$branchID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
     if (!empty($county)) {
-        $query = "UPDATE `employee` SET coutny = '$county' WHERE branch_id = '$branchID'";
+        $query = "UPDATE `branch` SET coutny = '$county' WHERE branch_id = '$branchID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
     if (!empty($city)) {
-        $query = "UPDATE `employee` SET city = '$city' WHERE branch_id = '$branchID'";
+        $query = "UPDATE `branch` SET city = '$city' WHERE branch_id = '$branchID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
     if (!empty($post_code)) {
-        $query = "UPDATE `employee` SET post_code = '$post_code' WHERE branch_id = '$branchID'";
+        $query = "UPDATE `branch` SET post_code = '$post_code' WHERE branch_id = '$branchID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
     if (!empty($contact_phone_region)) {
-        $query = "UPDATE `employee` SET contact_phone_region = '$contact_phone_region' WHERE branch_id = '$branchID'";
+        $query = "UPDATE `branch` SET contact_phone_region = '$contact_phone_region' WHERE branch_id = '$branchID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
     if (!empty($contact_phone)) {
-        $query = "UPDATE `employee` SET contact_phone = '$contact_phone' WHERE branch_id = '$branchID'";
+        $query = "UPDATE `branch` SET contact_phone = '$contact_phone' WHERE branch_id = '$branchID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 

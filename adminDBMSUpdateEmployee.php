@@ -11,7 +11,7 @@
                             <label class="col-md-4 control-label" for="employeeID">Employee ID</label>
                             <div class="col-md-4">
                                 <input id="employeeID" name="employeeID" type="text"
-                                       placeholder="Select Employee via ID" class="form-control input-md">
+                                       placeholder="Select Employee via ID" class="form-control input-md" required>
                             </div>
                         </div>
 

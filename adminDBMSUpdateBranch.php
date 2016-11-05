@@ -11,7 +11,7 @@
                             <label class="col-md-4 control-label" for="branchID">Branch ID</label>
                             <div class="col-md-4">
                                 <input id="branchID" name="branchID" type="text"
-                                       placeholder="Select Branch via ID" class="form-control input-md">
+                                       placeholder="Select Branch via ID" class="form-control input-md" required>
                             </div>
                         </div>
 
