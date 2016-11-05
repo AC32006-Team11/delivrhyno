@@ -63,7 +63,7 @@
                     } else if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="adminLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
                     } else {
-                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="register.php"><span class="glyphicon glyphicon-user"></span> Register</a></li> <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> </ul>';
+                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="uRegister.php"><span class="glyphicon glyphicon-user"></span> Register</a></li> <li><a href="uLogin.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> </ul>';
                     }
                     ?>
                 </div>

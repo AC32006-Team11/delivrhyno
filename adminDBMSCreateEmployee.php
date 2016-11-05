@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <form name="Register" method="POST" action="employeeRegister.php" class="form-horizontal">
+                <form name="Register" method="POST" action="DBMSCreateEmployee.php" class="form-horizontal">
                     <fieldset>
 
                         <div class="form-group">

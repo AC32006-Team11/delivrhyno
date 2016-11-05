@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <form name="Register" method="POST" action="restaurantMenuUpdate.php" class="form-horizontal">
+                <form name="Register" method="POST" action="DBMSCreateRestaurantMenuItems.php" class="form-horizontal">
                     <fieldset>
 
                         <div class="form-group">
@@ -53,6 +53,5 @@
             <div class="col-md-1"></div>
         </div>
     </div>
-
 
 <?php include 'footer.php'; ?>
