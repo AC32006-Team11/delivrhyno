@@ -17,25 +17,25 @@
                         <td><a href="adminDBMSCreateEmployee.php">Employee</a></td>
                         <td><a href=""></a></td>
                         <td><a href="adminDBMSUpdateEmployee.php">Employee</a></td>
-                        <td><a href=""></a></td>
+                        <td><a href="adminDBMSDeleteEmployee.php">Employee</a></td>
                     </tr>
                     <tr>
                         <td><a href="adminDBMSCreateBranch.php">Branch</a></td>
                         <td><a href=""></a></td>
                         <td><a href="adminDBMSUpdateBranch.php">Branch</a></td>
-                        <td><a href=""></a></td>
+                        <td><a href="adminDBMSDeleteBranch.php">Branch</a></td>
                     </tr>
                     <tr>
                         <td><a href="adminDBMSCreateRestaurant.php">Restaurant</a></td>
                         <td><a href=""></a></td>
                         <td><a href="adminDBMSUpdateRestaurant.php">Restaurant</a></td>
-                        <td><a href=""></a></td>
+                        <td><a href="adminDBMSDeleteRestaurant.php">Restaurant</a></td>
                     </tr>
                     <tr>
                         <td><a href="adminDBMSCreateRestaurantMenuItem.php">Restaurant Menu Item</a></td>
                         <td><a href=""></a></td>
                         <td><a href="adminDBMSUpdateRestaurantMenuItem.php">Restaurant Menu Item</a></td>
-                        <td><a href=""></a></td>
+                        <td><a href="adminDBMSDeleteRestaurantMenuItem.php">Restaurant Menu Item</a></td>
                     </tr>
                     </tbody>
                 </table>
