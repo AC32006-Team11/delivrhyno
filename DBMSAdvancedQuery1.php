@@ -7,7 +7,10 @@
 
     $city = $_GET["city"];
 	?>
-	<table class "table">
+	<div class="container">
+            <div class="row">
+                <div class="col-md-6">
+	<table class "table" style="border:2px solid black;border-collapse:collapse;width=100%;">
 	<tr>
 		<th>Forename</th>
 		<th>Surname</th>
@@ -44,5 +47,8 @@ if (isset($_GET["performquery"])) {
 } ?>
 
 </table>
+</div>
+</div>
+</div>
 
 <?php include 'footer.php'; ?>

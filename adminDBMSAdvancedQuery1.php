@@ -18,7 +18,7 @@
                             <label class="col-md-4 control-label" for="performquery"></label>
                             <div class="col-md-1">
                                 <button type="submit" value="advanced" id="performquery" name="performquery"
-                                        class="btn btn-success">Search
+                                        class="btn btn-success">Search 
                                 </button>
                             </div>
                         </div>
