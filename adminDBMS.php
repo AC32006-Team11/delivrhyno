@@ -52,7 +52,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>Option 1</td>
+                        <td><a href="adminDBMSAdvancedQuery1.php">View All Employees at a branch</a></td>
                     </tr>
                     <tr>
                         <td>Option 2</td>

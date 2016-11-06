@@ -46,8 +46,6 @@
 
 if (isset($_GET["performquery"])) {
     advancedQuery1();
-
-    
 } ?>
 </tbody>
 </table>
