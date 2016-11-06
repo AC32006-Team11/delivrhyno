@@ -8,6 +8,7 @@
 
 
     <div class="container">
+
         <?php
         if ( isset($_SESSION["loggedIn"]) == "loggedIn") { ?>
             <div class="row">
