@@ -2,6 +2,7 @@
 <?php include 'dbConnect.php'; ?>
 
 <?php
+
 if (isset($_SESSION["loggedIn"]) == "loggedIn") {
 $query = "SELECT * FROM `customer` WHERE '$_SESSION[username]' = username";
 $result = mysqli_query($db, $query) or die(mysqli_error($db));
@@ -10,6 +11,7 @@ $row = mysqli_fetch_array($result);
 
 $count = mysqli_num_rows($result);
 if ($count == 1) {
+    $_SESSION['customerID'] = $row[0];
     $_SESSION['city'] = $row[6];
     }
 } ?>

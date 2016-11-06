@@ -8,12 +8,12 @@
     $restaurantID = $_POST["restaurantID"];
 
     if (!empty($restaurantID)) {
-        $query = "DELETE FROM `restaurant` WHERE restaurant_id = '$restaurantID'";
+        $query = "DELETE FROM `restaurant_menu_item` WHERE restaurant_id = '$restaurantID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
     if (!empty($restaurantID)) {
-        $query = "DELETE FROM `restaurant_menu_items` WHERE restaurant_id = '$restaurantID'";
+        $query = "DELETE FROM `restaurant` WHERE restaurant_id = '$restaurantID'";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
     }
 
