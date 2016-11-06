@@ -5,7 +5,7 @@
     include 'dbConnect.php';
     $query = "SELECT * FROM employee";
     $result = $db -> query($query);
-    $n = 20;
+    $n = 1000;
     if($n > 0) {
         echo "<thead><tr><th>Role</th>
               <th>Title</th><th>Forename</th><th>Surname</th><th></th>Street</th>
