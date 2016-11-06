@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2>About Us:</h2>
+            <h2>About Us</h2>
             <br>
             <p class="text-justify">Delivrhyno is a national business based in the UK, specialising in providing
                 take-away delivery services, in particular allowing our customers to order food from local
