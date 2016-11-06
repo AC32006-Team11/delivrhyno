@@ -4,7 +4,7 @@
 <?php
 
 //cannot load with different menu if navigate back
-if (empty($_SESSION['restaurantID'])) {
+if (empty($_SESSION['restaurantID']) or !empty($_SESSION['restaurantID'])) {
     $_SESSION['restaurantID'] = $_GET['r'];
 }
 
@@ -13,7 +13,7 @@ if (empty($_SESSION['restaurantID'])) {
 
     echo '<div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h3>Restaurant Menu</h3>';
 
     while ($row = mysqli_fetch_array($result)) {
@@ -25,23 +25,5 @@ if (empty($_SESSION['restaurantID'])) {
                     <th><a href="orderSelection.php?i='.$row[0].'">Add item to basket</a></th>
                 </tr>'; } echo '</table>' ?>
 
-<?php
-
-
-    $_SESSION['itemID'] = $_GET['i'];
-
-if (isset($_SESSION['itemID'])) {
-    $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[itemID]' = restaurant_menu_item_id";
-    $result = mysqli_query($db, $query) or die(mysqli_error($db));
-
-        $row = mysqli_fetch_array($result);
-        $itemName = $row[3];
-        $itemPrice = $row[4];
-
-    $query2 = "INSERT INTO `basket` (customer_id, basket_items, basket_total) VALUES ($_SESSION[customerID], $itemName, $itemPrice)";
-    $result2 = mysqli_query($db, $query2) or die(mysqli_error($db));
-}
-
-?>
 
 <?php include 'footer.php'; ?>
