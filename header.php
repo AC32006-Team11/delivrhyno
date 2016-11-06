@@ -42,7 +42,7 @@
 
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="aboutUs.php">About Us</a></li>
-                        <li><a href="restaurantSelection.php">Restaurants</a></li>
+                        <li><a href="orderCreate.php">Create Order</a></li>
                         <?php
                         if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                             echo '<li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
