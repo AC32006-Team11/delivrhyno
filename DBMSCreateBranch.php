@@ -1,7 +1,7 @@
 <?php include 'header.php'; ?>
 
 <?php
-function registerBranch() {
+function createBranch() {
 
     include 'dbConnect.php';
 
@@ -18,11 +18,11 @@ function registerBranch() {
 
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
-    echo '<h1>Branch Registered</h1>';
+    echo '<h1>Branch Created</h1>';
 }
 
-if (isset($_POST["register"])) {
-    registerBranch();
+if (isset($_POST["create_branch"])) {
+    createBranch();
 }
 ?>
 
