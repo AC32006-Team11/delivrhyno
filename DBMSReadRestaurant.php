@@ -8,7 +8,7 @@
     $n = 1000;
     if($n > 0) {
         echo "<thead><tr><th>Restaurant Name</th>
-              <th>Restaurant Description</th><th>Street</th><th>County</th><th></th>City</th>
+              <th>Restaurant Description</th><th>Street</th><th>County</th><th>City</th>
               <th>Postcode</th><th>Contact Phone Region</th><th>Phone Number</th><th>Phone Number</th><th>Delivery Time</th>
               </tr></thead>";
         while($row=$result->fetch_assoc()){
