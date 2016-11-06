@@ -23,12 +23,15 @@ if ($count == 1) {
                 $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
                 echo '<h3>Restaurants near you</h3>';
+
                 while($row = mysqli_fetch_array($result)){
+
+
                     echo '<table class="table">
                             <tr>
                                 <th>'.$row[1].'</th>
                                 <th>'.$row[2].'</th>
-                                <th><a href="">Order Here</a></th>
+                                <th><a href="orderSelection.php?r='.$row[0].'">Order Here</a></th>
                             </tr>';
                 }
                 echo '</table>';
