@@ -42,10 +42,9 @@
 
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="aboutUs.php">About Us</a></li>
-                        <li><a href="orderCreate.php">Create Order</a></li>
                         <?php
                         if (isset($_SESSION["loggedIn"]) == "loggedIn") {
-                            echo '<li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
+                            echo '<li><a href="orderCreate.php">Create Order</a></li> <li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
                         } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
                             echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">Delivrhyno Database</a></li>';
                         } else if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
