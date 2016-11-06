@@ -2,10 +2,6 @@
 <?php include 'dbConnect.php'; ?>
 
 <?php
-$basketContents = array();
-$basketTotal = array(); ?>
-
-<?php
 
 //cannot load with different menu if navigate back
 if (empty($_SESSION['restaurantID'])) {
@@ -27,36 +23,25 @@ if (empty($_SESSION['restaurantID'])) {
                     <th>' . $row[2] . '</th>
                     <th>' . $row[4] . '</th>
                     <th><a href="orderSelection.php?i='.$row[0].'">Add item to basket</a></th>
-                </tr>'; }
+                </tr>'; } echo '</table>' ?>
 
-        echo '</table>
-                </div>
-                    <div class="col-md-6">
-                    <ul>
-                    <li><b>Basket Contents: </b>' ?>?></li>
-                    <li><b>Basket Total: </b><?php print_r($basketTotal); ?></li>
-                    <li><a href="orderBasket.php">View Basket</a></li>
-                    <li><a href="orderPayment.php">Submit Order</a></li>
-                    </ul>
-                        </div>
-                    </div>
-                </div>'; ?>
+<?php
 
-<?php //code for basket
 
-if (isset($_GET['i'])) {
     $_SESSION['itemID'] = $_GET['i'];
 
-    $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[itemID]' = restaurant_id ORDER BY menu_item_group DESC";
+if (isset($_SESSION['itemID'])) {
+    $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[itemID]' = restaurant_menu_item_id";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
-    $row = mysqli_fetch_array($result);
+        $row = mysqli_fetch_array($result);
+        $itemName = $row[3];
+        $itemPrice = $row[4];
 
-    array_push($basketContents, $row[3]);
-    array_push($basketTotal, $row[4]);
+    $query2 = "INSERT INTO `basket` (customer_id, basket_items, basket_total) VALUES ($_SESSION[customerID], $itemName, $itemPrice)";
+    $result2 = mysqli_query($db, $query2) or die(mysqli_error($db));
 }
+
 ?>
-
-
 
 <?php include 'footer.php'; ?>
