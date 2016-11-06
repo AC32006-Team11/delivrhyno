@@ -15,7 +15,6 @@
                 document.getElementById("total_items").value = response;
             }
         });
-
     });
 
     function cart(id) {
@@ -35,7 +34,6 @@
                 document.getElementById("total_items").value = response;
             }
         });
-
     }
 
     function show_cart() {
@@ -77,14 +75,13 @@ echo '<div class="container">
 
 while ($row = mysqli_fetch_array($result)) {
     echo '<table class="table">
-                <div class="items" id='.$row[0].'>
                 <tr>
                     <th><img src="assets\basket.png"></th>
                     <th><input type="hidden" id="item_name" value='.$row[3].'>' . $row[3] . '</th>
                     <th>' . $row[2] . '</th>
                     <th><input type="hidden" id="item_price" value='.$row[4].'>' . $row[4] . '</th>
                     <th><input type="button" value="Add To CART" onclick="cart('.$row[0].')"></th>
-                </tr>'; } echo '</table></div></div></div>'?>
+                </tr>'; } echo '</table></div></div>'?>
 
 <?php include 'footer.php'; ?>
 
