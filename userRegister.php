@@ -10,9 +10,9 @@ function checkUserExists() {
 
     $count = mysqli_num_rows($result);
     if ($count == 1) {
-        registerUser();
-    } else {
         echo '<h3>A user with that username exists</h3>';
+    } else {
+        registerUser();
     }
 
 }

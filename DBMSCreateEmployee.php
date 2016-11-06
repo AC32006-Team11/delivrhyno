@@ -42,10 +42,10 @@ function registerEmployee() {
 
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
-    echo '<h1>Employee Registered</h1>';
+    echo '<h1>Employee Created</h1>';
 }
 
-if (isset($_POST["register"])) {
+if (isset($_POST["create_employee"])) {
     checkUserExists();
 }
 ?>
