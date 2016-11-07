@@ -52,8 +52,10 @@
                         <?php
                         if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                             echo '<li><a href="orderCreate.php">Create Order</a></li> <li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
-                        } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
-                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">Delivrhyno Database</a></li>';
+                        } else if (isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
+                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">Your deliveries</a></li>';
+                        } else if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn") {
+                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">HR Manager Portal</a></li>';
                         } else if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
                             echo '<li><a href="adminAccount.php">Your Account</a></li> <li><a href="adminDBMS.php">DBMS</a></li>';
                         } else {
@@ -65,7 +67,9 @@
                     <?php
                     if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="userLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
-                    } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
+                    } else if (isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
+                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="employeeLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
+                    } else if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="employeeLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
                     } else if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="adminLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';

@@ -18,8 +18,15 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 
     $count = mysqli_num_rows($result);
     if ($count == 1) {
-        $_SESSION['empLoggedIn'] = "empLoggedIn";
-        $_SESSION['username'] = $username;
+        if ($row[2] == "HR") {
+            $_SESSION['HRLoggedIn'] = "HRLoggedIn";
+            $_SESSION['username'] = $username;
+        } else {
+            $_SESSION['DVRLoggedIn'] = "DVRLoggedIn";
+            $_SESSION['username'] = $username;
+        }
+
+
         echo "Valid Login Credentials.";
     }
 } else {
