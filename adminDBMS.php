@@ -15,7 +15,7 @@
                     <tbody>
                     <tr>
                         <td><a href="adminDBMSCreateEmployee.php">Employee</a></td>
-                        <td><a href=""></a></td>
+                        <td><a href="adminDBMSReadEmployees.php">Employee</a></td>
                         <td><a href="adminDBMSUpdateEmployee.php">Employee</a></td>
                         <td><a href="adminDBMSDeleteEmployee.php">Employee</a></td>
                     </tr>
