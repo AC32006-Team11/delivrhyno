@@ -55,7 +55,7 @@
                         <td><a href="adminDBMSAdvancedQuery1.php">View All Employees at a branch</a></td>
                     </tr>
                     <tr>
-                        <td>Option 2</td>
+                        <td><a href="adminDBMSAdvancedQuery2.php">Search for all restaraunts offering a specific menu item in a city</a></td>
                     </tr>
                     <tr>
                         <td>Option 3</td>

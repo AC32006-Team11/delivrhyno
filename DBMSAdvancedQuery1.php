@@ -4,10 +4,17 @@
 {
 
     include 'dbConnect.php';
-
+	
     $city = $_GET["city"];
 	?>
+	
 	<div class="container">
+	<div class="row">
+            <div class="col-md-12">
+			<h2 style="text-align:center;">You have searched for all staff at the Delivrhyno branch in <?php echo "$city"  ?></h2>
+			<br>
+			</div>
+			</div>
             <div class="row">
                 <div class="col-md-12">
 	<table class="table table-striped table-bordered table-condensed" style="width:100%";>

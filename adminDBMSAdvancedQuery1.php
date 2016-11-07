@@ -1,6 +1,12 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
+	<div class="row">
+            <div class="col-md-12">
+			<h2 style="text-align:center;">Search for all staff working at a specific branch of Delivrhyno</h2>
+			<br>
+			</div>
+			</div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
