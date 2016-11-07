@@ -27,7 +27,7 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
 }
 
 if(!empty($_SESSION["city"])) {
-    $sqlQueryRest = "SELECT * FROM restaurant WHERE '$_SESSION[city]' = restaurant.city ";
+    $sqlQueryRest = "SELECT * FROM `restaurant` WHERE '$_SESSION[city]' = city ";
     //$query = "SELECT * FROM `customer` WHERE '$_SESSION[username]' = username";
     $rresult = mysqli_query($db, $sqlQueryRest) or die(mysqli_error($db));
     $rcount = mysqli_num_rows($rresult);
@@ -86,8 +86,7 @@ if(!empty($_SESSION["city"])) {
                                 <?php echo $rrow[2]; ?>
                             </p>
                             <p>
-                                <?php
-                                echo '<a href="orderSelection.php?r='.$rrow[0].'">Order Here</a>'?>
+                                <?php echo '<a href="orderSelection.php?r='.$rrow[0].'">Order Here</a>'?>
                             </p>
                         </div>
                     </div>
