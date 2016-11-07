@@ -8,23 +8,34 @@ if (empty($_SESSION['restaurantID'])) {
     $_SESSION['restaurantID'] = $_GET['r'];
 }
 
-    $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id ORDER BY menu_item_group DESC";
-    $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
+    $extraquery = "SELECT DISTINCT menu_item_group FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id ORDER BY menu_item_group DESC";
+    $extraresult = mysqli_query($db, $extraquery) or die(mysqli_error($db));
+    $subcount = mysqli_num_rows($extraresult);
+    echo $subcount;
     echo '<div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Restaurant Menu</h3>';
+            <div class="col-md-12">
+                <div class="thumbnail">
+                    <h3>Restaurant Menu</h3>
+                    <h4>Restaurant id = ' . $_SESSION['restaurantID'] . '</h4>
+                </div>
+            </div>
+            <div class="col-md-12">';
 
-    while ($row = mysqli_fetch_array($result)) {
-        echo '<table class="table">
-                <tr>
-                    <th>' . $row[3] . '</th>
-                    <th>' . $row[2] . '</th>
-                    <th>' . $row[4] . '</th>
-                    <th><a href="orderSelection.php?i='.$row[0].'">Add item to basket</a></th>
-                </tr>'; } echo '</table>' ?>
-
+    while($menurow = mysqli_fetch_array($extraresult)){
+        echo '<div class="thumbnail">
+                    <h2>' . $menurow[0] . '</h2>';
+                    $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id AND menu_item_group ='$menurow[0]'";
+                    $result = mysqli_query($db, $query) or die(mysqli_error($db));
+                    while($row = mysqli_fetch_array($result)){
+                    echo '<div class="thumbnail">
+                        <h1>' . $row[3] . '</h1>
+                        <h2>' . $row[2] . '</h2>
+                        <h3>' . $row[4] . '</h3>
+                        <p><a href="orderSelection.php?i=' . $row[0] . '">Add item to basket</a></p>
+                    </div>';}
+                echo '</div>';}
+        echo ' </div>'?>
 <?php
 
 

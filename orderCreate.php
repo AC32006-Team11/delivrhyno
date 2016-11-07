@@ -86,7 +86,8 @@ if(!empty($_SESSION["city"])) {
                                 <?php echo $rrow[2]; ?>
                             </p>
                             <p>
-                                <?php echo '<a href="orderSelection.php?r='.$row[0].'">Order Here</a>'?>
+                                <?php
+                                echo '<a href="orderSelection.php?r='.$rrow[0].'">Order Here</a>'?>
                             </p>
                         </div>
                     </div>
