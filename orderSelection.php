@@ -77,9 +77,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo '<table class="table">
                 <tr>
                     <th><img src="assets\basket.png"></th>
-                    <th><input type="hidden" id="item_name_'.$row[0].'" value='.$row[3].'>' . $row[3] . '</th>
+                    <th><input type="hidden" id="item_name_'.$row[0].'" value="'.$row[3].'">' . $row[3] . '</th>
                     <th>' . $row[2] . '</th>
-                    <th><input type="hidden" id="item_price_'.$row[0].'" value='.$row[4].'>' . $row[4] . '</th>
+                    <th><input type="hidden" id="item_price_'.$row[0].'" value="'.$row[4].'">' . $row[4] . '</th>
                     <th><input type="button" value="Add To CART" onclick="cart('.$row[0].')"></th>
                 </tr>'; } echo '</table></div></div>'?>
 
