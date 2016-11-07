@@ -17,6 +17,7 @@
         });
     });
 
+
     function cart(item_id) {
         var ele = document.getElementById(item_id);
         var name = document.getElementById("item_name_"+item_id).value;
@@ -60,8 +61,8 @@
                 removecart: ele
             },
             success: function (response) {
-                document.getElementById("total_items").value = response;
                 $("#mycart").slideToggle();
+                document.getElementById("total_items").value = response;
             }
         });
     }
