@@ -19,8 +19,8 @@
 
     function cart(item_id) {
         var ele = document.getElementById(item_id);
-        var name = document.getElementById("item_name").value;
-        var price = document.getElementById("item_price").value;
+        var name = document.getElementById("item_name_"+item_id).value;
+        var price = document.getElementById("item_price_"+item_id).value;
 
         $.ajax({
             type: 'post',
@@ -77,9 +77,9 @@ while ($row = mysqli_fetch_array($result)) {
     echo '<table class="table">
                 <tr>
                     <th><img src="assets\basket.png"></th>
-                    <th><input type="hidden" id="item_name" value="'.$row[3].'">' . $row[3] . '</th>
+                    <th><input type="hidden" id="item_name_'.$row[0].'" value='.$row[3].'>' . $row[3] . '</th>
                     <th>' . $row[2] . '</th>
-                    <th><input type="hidden" id="item_price" value="'.$row[4].'">' . $row[4] . '</th>
+                    <th><input type="hidden" id="item_price_'.$row[0].'" value='.$row[4].'>' . $row[4] . '</th>
                     <th><input type="button" value="Add To CART" onclick="cart('.$row[0].')"></th>
                 </tr>'; } echo '</table></div></div>'?>
 
