@@ -4,7 +4,7 @@
 <?php
 
 //cannot load with different menu if navigate back
-if (empty($_SESSION['restaurantID'])) {
+if (isset($_SESSION['restaurantID'])) {
     $_SESSION['restaurantID'] = $_GET['r'];
 }
 
