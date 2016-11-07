@@ -51,13 +51,18 @@ if(!empty($_SESSION["city"])) {
 
 <div class="container">
     <div class="row">
-        <div class="Jumbotron">
+        <div class="col-md-10">
             <?php function clearBasket() {
                 unset($_SESSION['id']);
                 unset($_SESSION['name']);
                 unset($_SESSION['price']);
 
                 echo '<h4>Reset your basket as naviagated to a new page</h4>'; } ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="Jumbotron">
+
             <h2>Welcome to delivrhyno.  Your region: <?php echo $_SESSION['city'] ?></h2>
             <p></p>
         </div>
