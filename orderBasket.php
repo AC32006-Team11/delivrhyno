@@ -7,6 +7,9 @@ if(isset($_POST['removecart'])) {
     unset($_SESSION['id'][$unsetKey]);
     unset($_SESSION['name'][$unsetKey]);
     unset($_SESSION['price'][$unsetKey]);
+    $_SESSION['id'] = array_values($_SESSION['id']);
+    $_SESSION['name'] = array_values($_SESSION['name']);
+    $_SESSION['price'] = array_values($_SESSION['price']);
     exit();
 }
 
@@ -16,7 +19,7 @@ if(isset($_POST['total_cart_items']))
     exit();
 }
 
-if(isset($_POST['item_name']))
+if(isset($_POST['item_id']))
 {
 $_SESSION['id'][]=$_POST['item_id'];
 $_SESSION['name'][]=$_POST['item_name'];
@@ -33,7 +36,7 @@ echo "<div class='cart_items'>";
     echo "<b>".$_SESSION['id'][$i]."</b>";
     echo "<b>".$_SESSION['name'][$i]."</b>";
     echo "<b>".$_SESSION['price'][$i]."</b>";
-    echo "<input type='button' value='Remove from CART' onclick='removeCart($i)'>";
+    echo "<input type='button' id='removecart$i' value='$i' onclick='removeCart($i)'>";
     echo "</div>";
 }
 exit();

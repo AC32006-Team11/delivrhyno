@@ -50,8 +50,8 @@
         });
     }
 
-    function removeCart(item_id) {
-        var ele = document.getElementById(item_id);
+    function removeCart(id) {
+        var ele = document.getElementById("removecart"+id).value;
 
         $.ajax({
             type: 'post',
@@ -61,6 +61,7 @@
             },
             success: function (response) {
                 document.getElementById("total_items").value = response;
+                $("#mycart").slideToggle();
             }
         });
     }
@@ -78,7 +79,7 @@
 if (empty($_SESSION['restaurantID']) or !empty($_SESSION['restaurantID'])) {
     $_SESSION['restaurantID'] = $_GET['r'];
 }
-$extraquery = "SELECT DISTINCT `menu_item_group` FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id ORDER BY menu_item_group DESC";
+$extraquery = "SELECT DISTINCT menu_item_group FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id ORDER BY menu_item_group DESC";
 $extraresult = mysqli_query($db, $extraquery) or die(mysqli_error($db));
 $subcount = mysqli_num_rows($extraresult);
 echo $subcount;
@@ -97,18 +98,23 @@ while($menurow = mysqli_fetch_array($extraresult)){
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     while($row = mysqli_fetch_array($result)){
         echo '<div class="thumbnail">
-                   <table class="table">
-                        <tr>
-                            <th><img src="assets\basket.png"></th>
-                            <th><input type="hidden" id="item_name_'.$row[0].'" value="'.$row[3].'"></th>
-                            <th><input type="hidden" id="item_price_'.$row[0].'" value="'.$row[4].'"></th>
-                            <th><p>' . $row[3] . '</p></th>
-                            <th><p>' . $row[2] . '</p></th>
-                            <th><p>' . $row[4] . '</p></th>
-                            <th><input type="button" value="Add To CART" onclick="cart('.$row[0].')"></th>
-                        </tr>
-                   </table>
-               </div>';}
+                <div class="row">
+                   <div class = "col-md-3">
+                    <img src="assets\basket.png">
+                    <input type="hidden" id="item_name_'.$row[0].'" value="'.$row[3].'">
+                    <input type="hidden" id="item_price_'.$row[0].'" value="'.$row[4].'">
+                   </div>
+                   <div class = "col-md-3">
+                    <p>' . $row[3] . '</p>
+                   </div>
+                   <div class = "col-md-3">
+                    <p>' . $row[4] . '</p>
+                   </div>
+                   <div class = "col-md-3">
+                    <input type="button" value="Add To CART" onclick="cart('.$row[0].')">
+                   </div>
+               </div>
+              </div>';}
     echo '</div>';}
 echo ' </div>'?>
 
