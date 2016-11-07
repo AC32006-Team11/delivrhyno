@@ -1,5 +1,4 @@
 <?php include 'header.php'; ?>
-<?php include 'dbConnect.php'; ?>
 
     <div class="container">
         <div class="row">
