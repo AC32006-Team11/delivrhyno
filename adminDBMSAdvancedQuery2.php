@@ -1,12 +1,12 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
-	<div class="row">
+        <div class="row">
             <div class="col-md-12">
-			<h2 style="text-align:center;">Search for all restaraunts offering a specific menu item in a city</h2>
-			<br>
-			</div>
-			</div>
+                <h2 style="text-align:center;">Search for all restaraunts offering a specific menu item in a city</h2>
+                <br>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
@@ -20,7 +20,7 @@
                                        required>
                             </div>
                         </div>
-						<div class="form-group">
+                        <div class="form-group">
                             <label class="col-md-4 control-label" for="city">City</label>
                             <div class="col-md-4">
                                 <input id="city" name="city" type="text" placeholder="e.g. Dundee"
@@ -32,7 +32,7 @@
                             <label class="col-md-4 control-label" for="performquery"></label>
                             <div class="col-md-1">
                                 <button type="submit" value="advanced" id="performquery" name="performquery"
-                                        class="btn btn-success">Search 
+                                        class="btn btn-success">Search
                                 </button>
                             </div>
                         </div>

@@ -2,6 +2,17 @@
 
 session_start();
 
+if(isset($_POST['removecart'])) {
+    $unsetKey= $_POST['removecart'];
+    unset($_SESSION['id'][$unsetKey]);
+    unset($_SESSION['name'][$unsetKey]);
+    unset($_SESSION['price'][$unsetKey]);
+    $_SESSION['id'] = array_values($_SESSION['id']);
+    $_SESSION['name'] = array_values($_SESSION['name']);
+    $_SESSION['price'] = array_values($_SESSION['price']);
+    exit();
+}
+
 if(isset($_POST['total_cart_items']))
 {
     echo count($_SESSION['id']);
@@ -25,6 +36,7 @@ echo "<div class='cart_items'>";
     echo "<b>".$_SESSION['id'][$i]."</b>";
     echo "<b>".$_SESSION['name'][$i]."</b>";
     echo "<b>".$_SESSION['price'][$i]."</b>";
+    echo "<input type='button' id='removecart$i' value='$i' onclick='removeCart($i)'>";
     echo "</div>";
 }
 exit();

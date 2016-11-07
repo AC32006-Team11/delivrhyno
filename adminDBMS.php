@@ -55,13 +55,16 @@
                         <td><a href="adminDBMSAdvancedQuery1.php">View All Employees at a branch</a></td>
                     </tr>
                     <tr>
-                        <td><a href="adminDBMSAdvancedQuery2.php">Search for all restaraunts offering a specific menu item in a city</a></td>
+                        <td><a href="adminDBMSAdvancedQuery2.php">Search for all restaraunts offering a specific menu
+                                item in a city</a></td>
                     </tr>
                     <tr>
-                        <td><a href="adminDBMSAdvancedQuery3.php">Display all employees and customers associated with a branch in a city</a></td>
+                        <td><a href="adminDBMSAdvancedQuery3.php">Display all employees and customers associated with a
+                                branch in a city</a></td>
                     </tr>
                     <tr>
-                        <td><a href="adminDBMSAdvancedQuery4.php">Search for restaurants that do not serve a specific style of food in a city</a></td>
+                        <td><a href="adminDBMSAdvancedQuery4.php">Search for restaurants that do not serve a specific
+                                style of food in a city</a></td>
                     </tr>
                     </tbody>
                 </table>

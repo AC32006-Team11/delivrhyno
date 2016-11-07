@@ -1,6 +1,12 @@
-<link rel="stylesheet/less" type="text/css" href="css/styles.less"/>
 <?php include 'header.php'; ?>
 <?php include 'dbConnect.php'; ?>
+<?php
+if ( isset($_SESSION['restaurantID'])){
+    clearBasket();
+    }
+
+?>
+
 <?php
 //$sqlquery = "INSERT INTO craigwattdb.restaurant(restaurant_name, restaurant_description, street, county, city, post_code, contact_phone_region, contact_phone, delivery_time) VALUES ('Hong Kong','The finest Chinese food ever served','','','','','','','');";
 
@@ -41,9 +47,22 @@ if(!empty($_SESSION["city"])) {
 ?>
 
 
+
+
 <div class="container">
     <div class="row">
+        <div class="col-md-10">
+            <?php function clearBasket() {
+                unset($_SESSION['id']);
+                unset($_SESSION['name']);
+                unset($_SESSION['price']);
+
+                echo '<h4>Reset your basket as naviagated to a new page</h4>'; } ?>
+        </div>
+    </div>
+    <div class="row">
         <div class="Jumbotron">
+
             <h2>Welcome to delivrhyno.  Your region: <?php echo $_SESSION['city'] ?></h2>
             <p></p>
         </div>
