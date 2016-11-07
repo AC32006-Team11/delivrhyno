@@ -16,24 +16,30 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Payment Method
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
-                            <li><button style="border:none;" type="submit" value="door" class="btn btn-default">Pay at the door</button></a></li>
-                            <li><button style="border:none;" type="submit" value="paypal" class="btn btn-default">Pay using Paypal</button></a></li>
+                            <li>
+                                <button style="border:none;" type="submit" id="payment" value="door"
+                                        class="btn btn-default">Pay at the door
+                                </button>
+                                </a></li>
+                            <li>
+                                <button style="border:none;" type="submit" id="payment" value="paypal"
+                                        class="btn btn-default">Pay using Paypal
+                                </button>
+                                </a></li>
                         </ul>
                     </div>
                 </form>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <p style="color:grey;"><i>Select 'Pay at the door' to make your payment when the order is delivered to your house. Selecting this will immediately direct you to the order confirmation page.</i></p>
-                <p style="color:grey;"><i>With Paypal, you will be redirected to the Paypal Website were you can make a secure transaction. Once completed you will be redirected to the order confirmation page.</i></p>
-                <?php }  else {
-                echo'<h1>No User Found</h1>';
-                } ?>
             </div>
-            <div class="col-md-4 col-md-offset-2">
-
+            <div class="col-md-4">
+                <br><br><br><br>
+                <p style="color:grey;"><i>Select 'Pay at the door' to make your payment when the order is delivered to
+                        your house. Selecting this will immediately direct you to the order confirmation page.</i></p>
+                <p style="color:grey;"><i>With Paypal, you will be redirected to the Paypal Website were you can make a
+                        secure transaction. Once completed you will be redirected to the order confirmation page.</i>
+                </p>
+                <?php } else {
+                    echo '<h1>No User Found</h1>';
+                } ?>
             </div>
         </div>
     </div>

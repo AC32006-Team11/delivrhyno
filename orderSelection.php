@@ -89,6 +89,7 @@ echo '<div class="container">
                 <div class="thumbnail">
                     <h3>Restaurant Menu</h3>
                     <h4>Restaurant id = ' . $_SESSION['restaurantID'] . '</h4>
+                    <a href="orderPayment.php">Submit your order</a>
                 </div>
             </div>
             <div class="col-md-12">';
