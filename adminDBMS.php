@@ -58,7 +58,7 @@
                         <td><a href="adminDBMSAdvancedQuery2.php">Search for all restaraunts offering a specific menu item in a city</a></td>
                     </tr>
                     <tr>
-                        <td>Option 3</td>
+                        <td><a href="adminDBMSAdvancedQuery3.php">Display all employees and customers associated with a branch in a city</a></td>
                     </tr>
                     <tr>
                         <td>Option 4</td>

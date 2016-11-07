@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <form name="Search" method="GET" action="DBMSAdvancedQuery1.php" class="form-horizontal">
+                <form name="Search" method="GET" action="DBMSAdvancedQuery3.php" class="form-horizontal">
                     <fieldset>
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="city">City</label>

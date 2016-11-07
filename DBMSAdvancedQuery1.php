@@ -34,7 +34,7 @@
 					WHERE e.employee_id = s.employee_id AND EXISTS
 						(SELECT * FROM branch b
 						WHERE e.branch_id = b.branch_id
-					AND city = '$city') ORDER BY surname DESC;";
+					AND city = '$city') ORDER BY surname ASC;";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
 		while ($row = mysqli_fetch_array($result)) {
         echo '
