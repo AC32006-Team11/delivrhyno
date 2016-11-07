@@ -61,7 +61,7 @@
                         <td><a href="adminDBMSAdvancedQuery3.php">Display all employees and customers associated with a branch in a city</a></td>
                     </tr>
                     <tr>
-                        <td>Option 4</td>
+                        <td><a href="adminDBMSAdvancedQuery4.php">Search for restaurants that do not serve a specific style of food in a city</a></td>
                     </tr>
                     </tbody>
                 </table>
