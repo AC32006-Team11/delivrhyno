@@ -1,6 +1,61 @@
 <?php include 'header.php'; ?>
 <?php include 'dbConnect.php'; ?>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.ajax({
+            type: 'post',
+            url: 'orderBasket.php',
+            data: {
+            total_cart_items: "totalitems"
+            },
+            success: function (response) {
+            document.getElementById("total_items").value = response;
+        }
+        });
+    });
+    function cart(item_id) {
+        var ele = document.getElementById(item_id);
+        var name = document.getElementById("item_name_"+item_id).value;
+        var price = document.getElementById("item_price_"+item_id).value;
+        $.ajax({
+            type: 'post',
+            url: 'orderBasket.php',
+            data: {
+            item_id: ele,
+                item_name: name,
+                item_price: price
+            },
+            success: function (response) {
+            document.getElementById("total_items").value = response;
+        }
+        });
+    }
+    function show_cart() {
+        $.ajax({
+            type: 'post',
+            url: 'orderBasket.php',
+            data: {
+            showcart: "cart"
+            },
+            success: function (response) {
+            document.getElementById("mycart").innerHTML = response;
+            $("#mycart").slideToggle();
+        }
+        });
+    }
+</script>
+
+<b id="cart_button" onclick="show_cart();">
+    <input type="button" id="total_items" value="">
+</b>
+
+<div id="mycart">
+</div>
+
+
+
+
 <?php
 
 //cannot load with different menu if navigate back
