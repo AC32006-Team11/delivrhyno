@@ -1,16 +1,16 @@
 <?php include 'header.php'; ?>
+<?php include 'dbConnect.php'; ?>
 
 <?php
 
-//insert into anthonygrimesdb.employee(branch_id, role, title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, holiday_entitlement, username, password) VALUES ('', '','','','','','','','','','','','','','')
 if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn" or isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
-    $query = "SELECT * FROM `employee` WHERE '$_SESSION[username]' = username and role = 'HR' OR role = 'DVR'";
+    $query = "SELECT * FROM `employee` WHERE ('$_SESSION[username]' = username) and (role = 'HR' OR role = 'DVR')";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
 
     $count = mysqli_num_rows($result);
-    if ($count == 1) {
+    if ($count > 0) {
         $_SESSION['id'] = $row[0];
         $_SESSION['role'] = $row[2];
         $_SESSION['title'] = $row[3];

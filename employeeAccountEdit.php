@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<?php if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") { ?>
+<?php if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn" or isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") { ?>
 <div class="container">
     <div class="col-md-4">
         <h2>Please enter the details you wish to update</h2>
