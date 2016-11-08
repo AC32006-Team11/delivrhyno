@@ -16,12 +16,12 @@
                             <span class="caret"></span></button>
                         <ul class="dropdown-menu">
                             <li>
-                                <button style="border:none;" type="submit" id="payment" value="door"
+                                <button style="border:none;" name="payment" type="submit" id="payment" value="door"
                                         class="btn btn-default">Pay at the door
                                 </button>
                                 </a></li>
                             <li>
-                                <button style="border:none;" type="submit" id="payment" value="paypal"
+                                <button style="border:none;" name="payment" type="submit" id="payment" value="paypal"
                                         class="btn btn-default">Pay using Paypal
                                 </button>
                                 </a></li>
