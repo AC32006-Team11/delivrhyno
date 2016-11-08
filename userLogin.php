@@ -18,6 +18,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     if ($count == 1) {
         $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
+        $_SESSION['customerID'] = $row[0];
         echo "Valid Login Credentials.";
     }
 } else {

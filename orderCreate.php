@@ -27,7 +27,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
 
     $count = mysqli_num_rows($result);
     if ($count == 1) {
-        $_SESSION['customerID'] = $row[0];
         $_SESSION['city'] = $row[6];
     }
 }

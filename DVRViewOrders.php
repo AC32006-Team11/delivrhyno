@@ -24,8 +24,8 @@ function viewOrders()
 
     include 'dbConnect.php';
 
-    if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn" or isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
-    $query = "SELECT * FROM `employee` WHERE '$_SESSION[username]' = username and role = 'HR' OR role = 'DVR'";
+    if (isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
+    $query = "SELECT * FROM `employee` WHERE ('$_SESSION[username]' = username )and (role = 'HR' OR role = 'DVR')";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
@@ -51,6 +51,11 @@ function viewOrders()
 
     $rowRestaurant = mysqli_fetch_array($resultRestaurant);
 
+    $queryPayment = "SELECT * FROM transaction_payment WHERE transaction_id = '$row[0]'";
+    $resultPayment = mysqli_query($db, $queryPayment) or die(mysqli_error($db));
+
+    $rowPayment = mysqli_fetch_array($resultPayment);
+
     $_SESSION['orderedFrom'] = $rowRestaurant[1];
     $_SESSION['orderedAt'] = $row[4];
     $_SESSION['forename'] = $rowAddress[2];
@@ -59,9 +64,10 @@ function viewOrders()
     $_SESSION['county'] = $rowAddress[5];
     $_SESSION['city'] = $rowAddress[6];
     $_SESSION['post_code'] = $rowAddress[7];
+    $_SESSION['orderCost'] = $rowPayment[2];
 
     for ($i = 0; $i < count($_SESSION['id']); $i++) {
-        echo "<tbody><td>".$row[0]."</td><td>".$_SESSION['forename']." ".$_SESSION['surname']."</td><td>".$_SESSION['orderedFrom']."</td><td>".$_SESSION['orderedAt']."</td><td>".$row[5]."</td><td>Price</td><td>$_SESSION[street], $_SESSION[county], $_SESSION[city], $_SESSION[post_code]</td>";
+        echo "<tbody><td>".$row[0]."</td><td>".$_SESSION['forename']." ".$_SESSION['surname']."</td><td>$_SESSION[orderedFrom]</td><td>$_SESSION[orderedAt]</td><td>".$row[5]."</td><td>$_SESSION[orderCost]</td><td>$_SESSION[street], $_SESSION[county], $_SESSION[city], $_SESSION[post_code]</td>";
     }
     echo "</tbody></table>";
 }
