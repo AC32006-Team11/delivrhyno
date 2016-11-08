@@ -1,7 +1,7 @@
 <?php include 'header.php';?>
 
 <?php
-if (isset($_SESSION["loggedIn"]) == "loggedIn") { ?>
+if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn") { ?>
 
     <div class="container">
         <div class="row">
