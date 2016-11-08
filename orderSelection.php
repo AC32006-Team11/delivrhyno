@@ -97,7 +97,7 @@ while($menurow = mysqli_fetch_array($extraresult)){
                     <h2>' . $menurow[0] . '</h2>';
     $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id AND menu_item_group ='$menurow[0]'";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
-    while($row = mysqli_fetch_array($result)){
+    while($row = mysqli_fetch_array($result)) {
         echo '<div class="thumbnail">
                 <div class="row">
                    <div class = "col-md-3">
