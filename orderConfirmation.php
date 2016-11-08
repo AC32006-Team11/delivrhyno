@@ -3,6 +3,7 @@
 <?php
 
 //remember to unset these in orderBakset?? on reload
+//need to store transaction_payment at this stage and then call for DVRViewOrders
 $_SESSION['itemsString'] = implode($_SESSION['name']);
 $_SESSION['basketValue'] = array_sum($_SESSION['price']);
 $_SESSION['itemCount'] = count($_SESSION['name']);

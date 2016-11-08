@@ -1,6 +1,27 @@
 <?php include 'header.php'; ?>
 
     <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Payroll and Time off Manager</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="adminDBMSUpdatePayroll.php">Manage Payroll</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="adminDBMSUpdateTimeOff.php">Manage Time off</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-md-12">
                 <table class="table">
