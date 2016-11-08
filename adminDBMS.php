@@ -89,6 +89,10 @@
                         <td><a href="adminDBMSAdvancedQuery4.php">Search for restaurants that do not serve a specific
                                 style of food in a city</a></td>
                     </tr>
+					<tr>
+                        <td><a href="adminDBMSAdvancedQuery5.php">Display employees that earn above the average salary of the company
+                                </a></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
