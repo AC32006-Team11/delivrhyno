@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
+	<?php if ( isset($_SESSION["admLoggedIn"]) == "admLoggedIn") { ?>
         <div class="row">
             <div class="col-md-12">
                 <h2 style="text-align:center;">Search for restaurants that do not serve a specific style of food in a
@@ -42,5 +43,9 @@
             </div>
             <div class="col-md-1"></div>
         </div>
+		<?php } else {
+                    echo '<h1>You do not appear to be an admin! Access Denied!</h1>';
+                } ?>
+		</div>
 
 <?php include 'footer.php'; ?>
