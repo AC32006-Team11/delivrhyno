@@ -21,9 +21,11 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
         if ($row[2] == "HR") {
             $_SESSION['HRLoggedIn'] = "HRLoggedIn";
             $_SESSION['username'] = $username;
+            $_SESSION['emCity'] = $row[8];
         } else {
             $_SESSION['DVRLoggedIn'] = "DVRLoggedIn";
             $_SESSION['username'] = $username;
+            $_SESSION['emCity'] = $row[8];
         }
 
 

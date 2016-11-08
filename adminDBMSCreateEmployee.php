@@ -94,7 +94,7 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="city">City</label>
                             <div class="col-md-4">
-                                <input id="city" name="city" type="text" placeholder="City of Dundee"
+                                <input id="city" name="city" type="text" placeholder="Dundee"
                                        class="form-control input-md"
                                        required>
                             </div>

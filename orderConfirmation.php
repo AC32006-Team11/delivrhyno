@@ -3,7 +3,6 @@
 <?php
 
 //remember to unset these in orderBakset?? on reload
-//need to store transaction_payment at this stage and then call for DVRViewOrders
 $_SESSION['paymentMethod'] = $_POST["payment"];
 $_SESSION['itemsString'] = implode($_SESSION['name']);
 $_SESSION['basketValue'] = array_sum($_SESSION['price']);
@@ -23,7 +22,7 @@ $_SESSION['orderCode'] = $row[0];
 $queryPayment = "INSERT INTO `transaction_payment`(transaction_id, payment_amount, payment_method) VALUES ('$_SESSION[orderCode]', '$_SESSION[basketValue]', '$_SESSION[paymentMethod]')";
 $resultPayment = mysqli_query($db, $queryPayment) or die(mysqli_error($db));
 
-$queryStatus = "INSERT INTO `transactio_status`(transaction_id, status_description) VALUES ('$_SESSION[orderCode]', '0')";
+$queryStatus = "INSERT INTO `transaction_status`(transaction_id, status_description) VALUES ('$_SESSION[orderCode]', '0')";
 $resultStatus = mysqli_query($db, $queryStatus) or die(mysqli_error($db));
 
 ?>
