@@ -47,17 +47,18 @@ for ($i = 0; $i < count($_SESSION['id']); $i++) {
 
     $rowAddress = mysqli_fetch_array($resultAddress);
 
-    $queryRestaurant = "SELECT * FROM restaurant WHERE restaurant_id = '$row[2]'";
+    $queryRestaurant = "SELECT * FROM restaurant WHERE restaurant_id = '$rowTransaction[0]'";
     $resultRestaurant = mysqli_query($db, $queryRestaurant) or die(mysqli_error($db));
 
     $rowRestaurant = mysqli_fetch_array($resultRestaurant);
 
-    $queryPayment = "SELECT * FROM transaction_payment WHERE transaction_id = '$row[0]'";
+    $queryPayment = "SELECT * FROM transaction_payment WHERE transaction_id = '$rowTransaction[0]'";
     $resultPayment = mysqli_query($db, $queryPayment) or die(mysqli_error($db));
 
     $rowPayment = mysqli_fetch_array($resultPayment);
 
-    $_SESSION['orderCost'] = $rowPayment[0];
+    $_SESSION['orderItems'] = $rowTransaction[5];
+    $_SESSION['orderCost'] = $rowPayment[2];
     $_SESSION['orderedFrom'] = $rowRestaurant[1];
     $_SESSION['orderedAt'] = $rowTransaction[4];
     $_SESSION['forename'] = $rowAddress[2];
@@ -68,7 +69,7 @@ for ($i = 0; $i < count($_SESSION['id']); $i++) {
     $_SESSION['post_code'] = $rowAddress[7];
 
 
-    echo "<tbody><td>".$row[0]."</td><td>".$_SESSION['forename']." ".$_SESSION['surname']."</td><td>$_SESSION[orderedFrom]</td><td>$_SESSION[orderedAt]</td><td>".$row[5]."</td><td>$_SESSION[orderCost]</td><td>$_SESSION[street], $_SESSION[county], $_SESSION[city], $_SESSION[post_code]</td>";
+    echo "<tbody><td>".$rowTransaction[0]."</td><td>".$_SESSION['forename']." ".$_SESSION['surname']."</td><td>$_SESSION[orderedFrom]</td><td>$_SESSION[orderedAt]</td><td>$_SESSION[orderItems]</td><td>$_SESSION[orderCost]</td><td>$_SESSION[street], $_SESSION[county], $_SESSION[city], $_SESSION[post_code]</td>";
     echo "</tbody></table>"; }
 }
 
