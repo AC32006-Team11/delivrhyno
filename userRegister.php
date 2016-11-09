@@ -1,5 +1,7 @@
 <?php include 'header.php'; ?>
-
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
 <?php
 
 function checkUserExists() {
@@ -39,13 +41,16 @@ function registerUser() {
 
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
-    echo '<h1>Thanks for registering!</h1>';
+    echo "<h2 style='text-align:center;'>Thanks for registering!</h2>";
 }
 
 if (isset($_POST["register"])) {
     checkUserExists();
 }
 ?>
+		</div>
+	</div>
+</div>
 
 
 <?php include 'footer.php'; ?>

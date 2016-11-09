@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>
 
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
 <?php
 include('dbConnect.php');
 
@@ -20,11 +23,16 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     if ($count == 1) {
         $_SESSION['admLoggedIn'] = "admLoggedIn";
         $_SESSION['username'] = $username;
-        echo "Valid Login Credentials.";
+        echo "<h2 style='text-align:center;'>Valid Login Credentials</h2>";
     }
-} else {
-    echo "Invalid Login Credentials.";
-}
+	else 
+	{
+		echo "<h2 style='text-align:center;'>Invalid Login Credentials</h2>";
+	}
+} 
 ?>
+		</div>
+	</div>
+</div>
 
 <?php include 'footer.php'; ?>
