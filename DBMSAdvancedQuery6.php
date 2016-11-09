@@ -31,8 +31,6 @@
 		<th>Delivery Time</th>
 		<th>Branch</th>
 		<th>Email</th>
-
-
     </tr>
     </thead>
 
