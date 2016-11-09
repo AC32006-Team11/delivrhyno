@@ -42,7 +42,7 @@ for ($i = 0; $i < count($_SESSION['id']); $i++) {
 
     $rowTransaction = mysqli_fetch_array($resultTransaction);
 
-    $queryAddress = "SELECT * FROM customer WHERE customer_id = $row[1]";
+    $queryAddress = "SELECT * FROM customer WHERE customer_id = $rowTransaction[1]";//broke
     $resultAddress = mysqli_query($db, $queryAddress) or die(mysqli_error($db));
 
     $rowAddress = mysqli_fetch_array($resultAddress);
