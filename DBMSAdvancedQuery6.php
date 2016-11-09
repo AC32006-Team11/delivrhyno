@@ -40,7 +40,7 @@
 		//RIGHT JOIN
         $query = "SELECT r.*,b.branch_id,b.contact_email
 					FROM branch b RIGHT JOIN
-					restaurant r ON b.city=r.city;"
+					restaurant r ON b.city=r.city;";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
         while ($row = mysqli_fetch_array($result)) {
             echo '
