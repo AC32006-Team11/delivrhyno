@@ -1,6 +1,8 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
+	<h2 style="text-align:center;">User Register</h2>
+	<br>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
