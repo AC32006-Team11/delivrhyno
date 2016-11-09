@@ -7,10 +7,19 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
 
 
@@ -43,8 +52,10 @@
                         <?php
                         if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                             echo '<li><a href="orderCreate.php">Create Order</a></li> <li><a href="userAccount.php">Your Account</a></li> <li><a href="#">Your Orders</a></li>';
-                        } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
-                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">Delivrhyno Database</a></li>';
+                        } else if (isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
+                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="DVRViewOrders.php">Your deliveries</a></li>';
+                        } else if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn") {
+                            echo '<li><a href="employeeAccount.php">Your Account</a></li> <li><a href="#">HR Manager Portal</a></li>';
                         } else if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
                             echo '<li><a href="adminAccount.php">Your Account</a></li> <li><a href="adminDBMS.php">DBMS</a></li>';
                         } else {
@@ -56,7 +67,9 @@
                     <?php
                     if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="userLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
-                    } else if (isset($_SESSION["empLoggedIn"]) == "empLoggedIn") {
+                    } else if (isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
+                        echo '<ul class="nav navbar-nav navbar-right"> <li><a href="employeeLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
+                    } else if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="employeeLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
                     } else if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
                         echo '<ul class="nav navbar-nav navbar-right"> <li><a href="adminLogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li> </ul>';
