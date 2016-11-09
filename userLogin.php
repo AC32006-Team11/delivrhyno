@@ -12,12 +12,15 @@ include('dbConnect.php');
         $passwordInsecure = $_POST["password"];
         $password = sha1($passwordInsecure);
 
-    $query = "SELECT * FROM `customer` WHERE username = '$username' and password='$password'";
-    $result = mysqli_query($db, $query) or die(mysqli_error($db));
-
-    $row = mysqli_fetch_array($result);
-
-    $count = mysqli_num_rows($result);
+    //$query = "SELECT * FROM `customer` WHERE username = '$username' and password='$password'";
+    //$result = mysqli_query($db, $query) or die(mysqli_error($db));
+	
+    //$row = mysqli_fetch_array($result);
+	$result=mysqli_prepare($db,'SELECT * FROM `customer` WHERE username =? and password=?') or die(mysqli_error($db));
+	mysqli_stmt_bind_param($result,'ss',$username,$password);
+	mysqli_stmt_execute($result);
+	mysqli_stmt_store_result($result);
+    $count = mysqli_stmt_num_rows($result);
     if ($count == 1) {
         $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
@@ -30,7 +33,7 @@ include('dbConnect.php');
 	}
 	echo "<h2 style='text-align:center;'>Redirecting you to the home page...</h2>";
 	?><script>
-    setTimeout(function(){location.href="index.php"} , 3000);
+    setTimeout(function(){location.href="index.php"} , 1500);
 	</script><?php
 }
 
