@@ -93,6 +93,10 @@
                         <td><a href="adminDBMSAdvancedQuery5.php">Display employees that earn above the average salary of the company
                                 </a></td>
                     </tr>
+					<tr>
+                        <td><a href="adminDBMSAdvancedQuery6.php">Display all restaurants and their associated branches
+                                </a></td>
+                    </tr>
                     </tbody>
                 </table>
             </div>
