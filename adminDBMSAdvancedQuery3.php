@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
+	<?php if ( isset($_SESSION["admLoggedIn"]) == "admLoggedIn") { ?>
         <div class="row">
             <div class="col-md-12">
                 <h2 style="text-align:center;">Display all employees and customers associated with a branch in a
@@ -34,5 +35,13 @@
             </div>
             <div class="col-md-1"></div>
         </div>
+		<?php } else {
+			?> <div class="row">
+            <div class="col-md-12">
+                    <?php echo '<h2 style="text-align:center";>You do not appear to be an admin! Access Denied!</h2>'; ?>
+			</div>
+			</div> <?php
+                } ?>
+		</div>
 
 <?php include 'footer.php'; ?>
