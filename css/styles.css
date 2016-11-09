@@ -15,16 +15,17 @@
 }
 #cart_button input[type="button"]
 {
+    z-index: 1;
     background:none;
     border:none;
-    background-color:red;
-    border-radius:100%;
-    height:30px;
-    width:30px;
+    background-color:royalblue;
+    border-radius:5px;
+    height:45px;
+    width:88%;
     margin-top:0px;
     color:white;
     font-size:17px;
-    cursor:pointer;
+    margin-bottom: 10px;
 }
 #mycart
 {
@@ -35,15 +36,13 @@
 }
 #mycart .cart_items
 {
-    border-bottom:1px dashed silver;
-    padding:20px;
-    padding-left:10px;
+    border-bottom: 1px dashed black;
 }
 #mycart .cart_items b
 {
-    margin:0px;
+    margin:5px;
     font-size:17px;
-    color:green;
+    color:Black;
 }
 
 
@@ -145,5 +144,4 @@
         opacity: 0;
     }
 }
-
 
