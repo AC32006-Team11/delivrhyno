@@ -1,6 +1,8 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
+	<h2 style="text-align:center;">Employee Login</h2>
+	<br>
         <form method="POST" action="employeeLogin.php" class="form-horizontal">
             <fieldset>
                 <div class="form-group">
