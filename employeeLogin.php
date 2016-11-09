@@ -1,5 +1,5 @@
 <?php include 'header.php'; ?>
-<meta http-equiv="refresh" content="2; url="index.php" />
+
 <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -25,11 +25,9 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
         if ($row[2] == "HR") {
             $_SESSION['HRLoggedIn'] = "HRLoggedIn";
             $_SESSION['username'] = $username;
-            $_SESSION['emCity'] = $row[8];
         } else {
             $_SESSION['DVRLoggedIn'] = "DVRLoggedIn";
             $_SESSION['username'] = $username;
-            $_SESSION['emCity'] = $row[8];
         }
 
 
@@ -41,6 +39,9 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
 		echo "<h2 style='text-align:center;'>Invalid Login Credentials</h2>";
 	}
 	echo "<h2 style='text-align:center;'>Redirecting you to the home page...</h2>";
+	?><script>
+    setTimeout(function(){location.href="index.php"} , 3000);
+	</script><?php
 }
 ?>
 		</div>
