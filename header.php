@@ -48,7 +48,7 @@
                     </div>
 
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="aboutUs.php">About Us</a></li>
+                        <li><a href="aboutUs.php">About Us</a></li>
                         <?php
                         if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                             echo '<li><a href="orderCreate.php">Create Order</a></li> <li><a href="userAccount.php">Your Account</a></li> <li><a href="userOrder.php">Your Orders</a></li>';
