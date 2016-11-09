@@ -27,7 +27,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                     unset($_SESSION['id']);
                     unset($_SESSION['name']);
                     unset($_SESSION['price']);
-
                     echo '<h4>Reset your basket as naviagated to a new page</h4>';
                 } ?>
             </div>
@@ -39,6 +38,7 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <p></p>
             </div>
             <br/>
+        </div>
             <?php
             echo 'helloothere';
             if(!empty($_SESSION["city"])) {
@@ -54,63 +54,32 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                     $stmt->store_result();
                     $rrow = array();
                         while ($stmt->fetch()) {
-                            // Because $name and $countryCode are passed by reference, their value
-                            // changes on every iteration to reflect the current row;
                             $rrow = array('id'=>$id,'name'=>$name,'info'=>$info);
                             echo 'testtesttesttest'; ?>
-
                             <div class="row">
-                                <div class="col-md-6 col-md-6">
-                                    <div class="thumbnail"
-
-                                        <?php //style="background-color: palegreen" above ^^
-                                        ?>
-                                    >
+                                <div class="col-md-6">
+                                    <div class="thumbnail">
                                         <img src="assets/restaurant1.jpg" style="padding:15px;">
                                         <div>
                                             <h3>
-                                                <?php
-                                                //^^class = caption in div
-                                                //echo $ordercount;
-                                                echo $rrow['id'];
-                                                //if ($ordercount < 2) {
-                                                    ?>
+                                                <?php echo $rrow['id'];?>
                                                     <small>(Your Most frequent Restaurant!)</small>
-                                                    <?php
-                                                //} else {
-                                                //}
-                                                ?>
                                             </h3>
                                             <p>
                                                 <?php echo $rrow['name']; ?>
                                                 <?php echo $rrow['info']; ?>
                                             </p>
                                             <p>
-                                                <?php echo '<a href="orderSelection.php?r=' . $rrow['id'] . '">Order Here</a>' ?>
+                                                <?php echo '<a href="orderSelection.php?r=' . $rrow['id'] . '">Order Here</a>'?>
                                             </p>
                                         </div>
                                     </div>
                                 </div>
-                                <?php
-
-                                ?>
                             </div>
-                            </div>
-                            </div>
-
-
-
                         <?php }
                         $stmt->close();
                     }
                 }
-            //$sqlQueryRest = "SELECT * FROM `restaurant` WHERE '$_SESSION[city]' = city ";
-            //$sqlQueryRest = "SELECT * FROM `restaurant` WHERE '$_SESSION[city]' = city ";
-            //$rresult = mysqli_query($db, $sqlQueryRest) or die(mysqli_error($db));
-            //$rcount = mysqli_num_rows($rresult);
-            //}
             ?>
-
-
-
+    </div>
 <?php include 'footer.php'; ?>
