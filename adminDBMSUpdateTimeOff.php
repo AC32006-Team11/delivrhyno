@@ -16,9 +16,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-4 control-label" for="leaveCat">Leave Category</label>
+                            <label class="col-md-4 control-label" for="leaveCategory">Leave Category</label>
                             <div class="col-md-4">
-                                <input id="leaveCat" name="leaveCat" type="text"
+                                <input id="leaveCategory" name="leaveCategory" type="text"
                                        placeholder="Sickness | Holiday" class="form-control input-md" required>
                             </div>
                         </div>
