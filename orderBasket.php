@@ -13,12 +13,6 @@ if(isset($_POST['removecart'])) {
     exit();
 }
 
-if(isset($_POST['total_cart_items']))
-{
-    echo count($_SESSION['id']);
-    exit();
-}
-
 if(isset($_POST['item_id']))
 {
     $_SESSION['id'][]=$_POST['item_id'];
@@ -31,6 +25,7 @@ if(isset($_POST['item_id']))
 if(isset($_POST['showcart']))
 {
     echo "<table class='table'><thead><tr><th>Item Name</th><th>Item price</th></tr></thead>";
+    if(isset($_SESSION['id'])) {
     for($i=0;$i<count($_SESSION['id']);$i++)
     {
         echo "<tbody><tr>";
@@ -41,5 +36,10 @@ if(isset($_POST['showcart']))
     }
     echo "<td><a href=\"orderPayment.php\">Submit your order</a></td></table>";
     exit();
-}
+} else {
+        echo "<tbody><tr>";
+        echo '<td></td>';
+        echo '</tr></tbody></div>';
+    
+    } }
 ?>

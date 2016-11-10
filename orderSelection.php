@@ -2,21 +2,6 @@
 
 <script type="text/javascript">
 
-    $(document).ready(function () {
-
-        $.ajax({
-            type: 'post',
-            url: 'orderBasket.php',
-            data: {
-                total_cart_items: "totalitems"
-            },
-            success: function (response) {
-                document.getElementById("total_items").value = response;
-            }
-        });
-    });
-
-
     function cart(item_id) {
         var ele = document.getElementById(item_id);
         var name = document.getElementById("item_name_"+item_id).value;
@@ -31,7 +16,6 @@
                 item_price: price
             },
             success: function (response) {
-                document.getElementById("total_items").value = response;
             }
         });
     }
@@ -61,14 +45,13 @@
             },
             success: function (response) {
                 $("#mycart").slideToggle();
-                document.getElementById("total_items").value = response;
             }
         });
     }
 </script>
 
 <b id="cart_button" onclick="show_cart();">
-    <input type="button" id="total_item s" value="Show/Hide My Basket">
+    <input type="button" id="" value="Show/Hide My Basket">
 </b>
 
 <div id="mycart">
