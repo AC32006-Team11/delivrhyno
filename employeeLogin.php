@@ -16,7 +16,7 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     $password = sha1($passwordInsecure);
 
 	if (!empty($username)) {
-		$result=mysqli_prepare($db,"SELECT role FROM `employee` WHERE (username = ? and password=?) and (role = 'HR' OR role ='DVR')");
+		$result=mysqli_prepare($db,"SELECT role FROM `employeeview` WHERE (username = ? and password=?) and (role = 'HR' OR role ='DVR')");
 		mysqli_stmt_bind_param($result,'ss',$username,$password);
 		mysqli_stmt_execute($result);
 		mysqli_stmt_store_result($result);

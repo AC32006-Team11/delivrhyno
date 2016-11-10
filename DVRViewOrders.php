@@ -25,7 +25,7 @@ function viewOrders()
     include 'dbConnect.php';
 
     if (isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
-    $query = "SELECT * FROM `employee` WHERE (username = '$_SESSION[username]')and (role = 'HR' OR role = 'DVR')";
+    $query = "SELECT * FROM `employeeview` WHERE (username = '$_SESSION[username]')and (role = 'HR' OR role = 'DVR')";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
@@ -37,22 +37,22 @@ function viewOrders()
     }
 
 for ($i = 0; $i < count($_SESSION['id']); $i++) {
-    $queryTransaction = "SELECT * FROM transaction WHERE employee_id = '$_SESSION[id]'";
+    $queryTransaction = "SELECT * FROM transactionview WHERE employee_id = '$_SESSION[id]'";
     $resultTransaction = mysqli_query($db, $queryTransaction) or die(mysqli_error($db));
 
     $rowTransaction = mysqli_fetch_array($resultTransaction);
 
-    $queryAddress = "SELECT * FROM customer WHERE customer_id = $rowTransaction[1]";//broke
+    $queryAddress = "SELECT * FROM customerview WHERE customer_id = $rowTransaction[1]";//broke
     $resultAddress = mysqli_query($db, $queryAddress) or die(mysqli_error($db));
 
     $rowAddress = mysqli_fetch_array($resultAddress);
 
-    $queryRestaurant = "SELECT * FROM restaurant WHERE restaurant_id = '$rowTransaction[0]'";
+    $queryRestaurant = "SELECT * FROM restaurantview WHERE restaurant_id = '$rowTransaction[0]'";
     $resultRestaurant = mysqli_query($db, $queryRestaurant) or die(mysqli_error($db));
 
     $rowRestaurant = mysqli_fetch_array($resultRestaurant);
 
-    $queryPayment = "SELECT * FROM transaction_payment WHERE transaction_id = '$rowTransaction[0]'";
+    $queryPayment = "SELECT * FROM transactionpaymentview WHERE transaction_id = '$rowTransaction[0]'";
     $resultPayment = mysqli_query($db, $queryPayment) or die(mysqli_error($db));
 
     $rowPayment = mysqli_fetch_array($resultPayment);

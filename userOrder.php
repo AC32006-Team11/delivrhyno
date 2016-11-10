@@ -12,10 +12,10 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") { ?>
 
                     echo "<thead><tr><th>Order ID</th><th>Ordered At</th><th>Items</th><th>Delivery Address</th></tr></thead>";
 
-                    $queryTransaction = "SELECT * FROM transaction WHERE customer_id = '$_SESSION[customerID]'";
+                    $queryTransaction = "SELECT * FROM transactionview WHERE customer_id = '$_SESSION[customerID]'";
                     $resultTransaction = mysqli_query($db, $queryTransaction) or die(mysqli_error($db));
 
-                    $queryAddress = "SELECT * FROM customer WHERE customer_id = '$_SESSION[customerID]'";
+                    $queryAddress = "SELECT * FROM customerview WHERE customer_id = '$_SESSION[customerID]'";
                     $resultAddress = mysqli_query($db, $queryAddress) or die(mysqli_error($db));
 
                     $rowAddress = mysqli_fetch_array($resultAddress);

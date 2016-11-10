@@ -13,7 +13,7 @@ if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn") { ?>
                 <table class="table table-condensed">
 
                     <?php
-                    $queryOrders = "SELECT * FROM `transaction_status` WHERE status_description = '0'";
+                    $queryOrders = "SELECT * FROM `transactionstatusview` WHERE status_description = '0'";
                     $resultOrders = mysqli_query($db, $queryOrders) or die(mysqli_error($db));
 
                     $row = mysqli_fetch_array($resultOrders);

@@ -62,7 +62,7 @@
 if (empty($_SESSION['restaurantID']) or !empty($_SESSION['restaurantID'])) {
     $_SESSION['restaurantID'] = $_GET['r'];
 }
-$extraquery = "SELECT DISTINCT menu_item_group FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id ORDER BY menu_item_group DESC";
+$extraquery = "SELECT DISTINCT menu_item_group FROM `restaurantitems` WHERE '$_SESSION[restaurantID]' = restaurant_id ORDER BY menu_item_group DESC";
 $extraresult = mysqli_query($db, $extraquery) or die(mysqli_error($db));
 $subcount = mysqli_num_rows($extraresult);
 
@@ -71,7 +71,7 @@ echo '<div class="container">
 while($menurow = mysqli_fetch_array($extraresult)){
     echo '<div class="panel panel-default">
                     <div class="panel-heading"><h2>' . $menurow[0] . '</h2></div>';
-    $query = "SELECT * FROM `restaurant_menu_item` WHERE '$_SESSION[restaurantID]' = restaurant_id AND menu_item_group ='$menurow[0]'";
+    $query = "SELECT * FROM `restaurantitems` WHERE '$_SESSION[restaurantID]' = restaurant_id AND menu_item_group ='$menurow[0]'";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
     while($row = mysqli_fetch_array($result)) {
         echo '<div class="panel panel-body">

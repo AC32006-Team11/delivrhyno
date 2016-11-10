@@ -8,7 +8,7 @@ while($randomR2 == $randomR){
     $randomR2 = rand(1,3);
 }
 if (isset($_SESSION["loggedIn"]) == "loggedIn") {
-    $query = "SELECT * FROM `customer` WHERE '$_SESSION[username]' = username";
+    $query = "SELECT * FROM `customerview` WHERE '$_SESSION[username]' = username";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);
@@ -19,7 +19,7 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
     }
 }
 if(!empty($_SESSION["city"])) {
-    $sqlQueryRest = "SELECT * FROM `restaurant` WHERE '$_SESSION[city]' = city ";
+    $sqlQueryRest = "SELECT * FROM `restaurantview` WHERE '$_SESSION[city]' = city ";
     //$query = "SELECT * FROM `customer` WHERE '$_SESSION[username]' = username";
     $rresult = mysqli_query($db, $sqlQueryRest) or die(mysqli_error($db));
     $rcount = mysqli_num_rows($rresult);

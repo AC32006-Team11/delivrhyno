@@ -4,7 +4,7 @@
 <?php
 if (isset($_SESSION["loggedIn"]) == "loggedIn") {
         $currentUsername = $_SESSION['username'];
-        if ($stmt = $db->prepare("SELECT title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email FROM customer WHERE username = ?")) {
+        if ($stmt = $db->prepare("SELECT title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email FROM customerview WHERE username = ?")) {
             $stmt->bind_param("s", $currentUsername);
             $stmt->execute();
             $stmt->bind_result($title, $forename, $surname, $street, $county, $city, $post_code, $contact_phone_region, $contact_phone, $contact_email);

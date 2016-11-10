@@ -4,7 +4,7 @@
 <?php
 
 if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn" or isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") {
-    $query = "SELECT * FROM `employee` WHERE ('$_SESSION[username]' = username) and (role = 'HR' OR role = 'DVR')";
+    $query = "SELECT * FROM `employeeview` WHERE ('$_SESSION[username]' = username) and (role = 'HR' OR role = 'DVR')";
     $result = mysqli_query($db, $query) or die(mysqli_error($db));
 
     $row = mysqli_fetch_array($result);

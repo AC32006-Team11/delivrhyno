@@ -20,7 +20,7 @@ function checkUserExists() {
 
     //$count = mysqli_num_rows($result);
 	//
-	$result=mysqli_prepare($db, 'SELECT username FROM `customer` WHERE username = ?') or die(mysqli_error($db));
+	$result=mysqli_prepare($db, 'SELECT username FROM `customerview` WHERE username = ?') or die(mysqli_error($db));
 	mysqli_stmt_bind_param($result,'s', $user);
 	mysqli_stmt_execute($result);
 	mysqli_stmt_store_result($result);
@@ -54,7 +54,7 @@ function registerUser() {
     /*$query = "INSERT INTO customer(title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, username, password) VALUES ('$title', '$forename', '$surname', '$street', '$county', '$city', '$post_code', '$contact_phone_region', '$contact_phone', '$contact_email', '$username', '$password')";
 	
     $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
-	$query=mysqli_prepare($db,"INSERT INTO customer(title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+	$query=mysqli_prepare($db,"INSERT INTO customerview(title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, username, password) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 	
 	mysqli_stmt_bind_param($query,'ssssssssssss',$title,$forename,$surname,$street,$county,$city,$post_code,$contact_phone_region,$contact_phone,$contact_email,$username,$password);
 	mysqli_stmt_execute($query);
