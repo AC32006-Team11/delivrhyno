@@ -18,53 +18,97 @@
 
 
     if (!empty($title)) {
-        $query = "UPDATE `customer` SET title = '$title' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        //$query = "UPDATE `customer` SET title = '$title' WHERE username = '$_SESSION[username]'";
+        //$result = mysqli_query($db, $query) or die(mysqli_error($db));
+		$query = mysqli_prepare($db,"UPDATE `customer` SET title = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$title,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query);
+		
     }
 
     if (!empty($forename)) {
-        $query = "UPDATE `customer` SET forename = '$forename' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET forename = '$forename' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET forename = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$forename,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query);
     }
 
     if (!empty($surname)) {
-        $query = "UPDATE `customer` SET surname = '$surname' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET surname = '$surname' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET surname = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$surname,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query);
     }
 
     if (!empty($street)) {
-        $query = "UPDATE `customer` SET street = '$street' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET street = '$street' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET street = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$street,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
+		
     }
 
     if (!empty($county)) {
-        $query = "UPDATE `customer` SET county = '$county' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET county = '$county' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET county = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$county,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
+		
     }
 
     if (!empty($city)) {
-        $query = "UPDATE `customer` SET city = '$city' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET city = '$city' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET city = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$city,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
     }
 
     if (!empty($post_code)) {
-        $query = "UPDATE `customer` SET post_code = '$post_code' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET post_code = '$post_code' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET post_code = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$post_code,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
     }
 
     if (!empty($contact_phone_region)) {
-        $query = "UPDATE `customer` SET contact_phone_region = '$contact_phone_region' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET contact_phone_region = '$contact_phone_region' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET contact_phone_region = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$contact_phone_region,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
     }
 
     if (!empty($contact_phone)) {
-        $query = "UPDATE `customer` SET contact_phone = '$contact_phone' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET contact_phone = '$contact_phone' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET contact_phone = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$contact_phone,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
     }
 
     if (!empty($contact_email)) {
-        $query = "UPDATE `customer` SET contact_email = '$contact_email' WHERE username = '$_SESSION[username]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        /*$query = "UPDATE `customer` SET contact_email = '$contact_email' WHERE username = '$_SESSION[username]'";
+        $result = mysqli_query($db, $query) or die(mysqli_error($db));*/
+		$query = mysqli_prepare($db,"UPDATE `customer` SET contact_email = ? WHERE username = ?");
+		mysqli_stmt_bind_param($query,'ss',$contact_email,$username);
+		mysqli_stmt_execute($query);
+		mysqli_stmt_close($query); 
+		
     }
 }
 
@@ -75,7 +119,7 @@ if (isset($_POST["UpdateAccount"])) {
     '<div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h1>Thanks for updating your details!</h1>
+                    <h2 style="text-align:center">Thanks for updating your details!</h2>
                 </div>
             </div>
         </div>';
