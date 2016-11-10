@@ -36,7 +36,7 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="contact_email">Contact Email</label>
                 <div class="col-md-6">
                     <input id="contact_email" name="contact_email" type="email"
-                           placeholder="contact email" <?php if($_SESSION['contact_email']!=null){echo 'value=' . $_SESSION['contact_email'] . '';} ?>
+                           placeholder="contact email"
                            class="form-control input-md">
                 </div>
             </div>
@@ -45,7 +45,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="title">Title</label>
                 <div class="col-md-6">
                     <input id="title" name="title" type="text" placeholder="title"
-                        <?php if($_SESSION['title']!=null){echo 'value=' . $_SESSION['title'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -54,7 +53,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="forename">Forename</label>
                 <div class="col-md-6">
                     <input id="forename" name="forename" type="text" placeholder="forename"
-                        <?php if($_SESSION['forename']!=null){echo 'value=' . $_SESSION['forename'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -63,7 +61,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="surname">Surname</label>
                 <div class="col-md-6">
                     <input id="surname" name="surname" type="text" placeholder="surname"
-                        <?php if($_SESSION['surname']!=null){echo 'value=' . $_SESSION['surname'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -72,7 +69,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="street">Street</label>
                 <div class="col-md-6">
                     <input id="street" name="street" type="text" placeholder="street"
-                        <?php if($_SESSION['street']!=null){echo 'value=' . $_SESSION['street'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -81,7 +77,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="county">County</label>
                 <div class="col-md-6">
                     <input id="county" name="county" type="text" placeholder="county"
-                        <?php if($_SESSION['county']!=null){echo 'value=' . $_SESSION['county'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -90,7 +85,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="city">City</label>
                 <div class="col-md-6">
                     <input id="city" name="city" type="text" placeholder="city"
-                        <?php if($_SESSION['city']!=null){echo 'value=' . $_SESSION['city'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -99,7 +93,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="post_code">Post Code</label>
                 <div class="col-md-6">
                     <input id="post_code" name="post_code" type="text" placeholder="post code"
-                        <?php if($_SESSION['post_code']!=null){echo 'value=' . $_SESSION['post_code'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -110,7 +103,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <div class="col-md-6">
                     <input id="contact_phone_region" name="contact_phone_region" type="text"
                            placeholder="contact phone region"
-                        <?php if($_SESSION['contact_phone_region']!=null){echo 'value=' . $_SESSION['contact_phone_region'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
@@ -119,7 +111,6 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") {
                 <label class="col-md-3 control-label" for="contact_phone">Contact Phone</label>
                 <div class="col-md-6">
                     <input id="contact_phone" name="contact_phone" type="text" placeholder="contact phone"
-                        <?php if($_SESSION['contact_phone']!=null){echo 'value=' . $_SESSION['contact_phone'] . '';} ?>
                            class="form-control input-md">
                 </div>
             </div>
