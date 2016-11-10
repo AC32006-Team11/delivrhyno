@@ -15,25 +15,28 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     $passwordInsecure = $_POST["password"];
     $password = sha1($passwordInsecure);
 
-	if (!empty($transactionID)) {
-		if ($stmt = $db->prepare("SELECT * FROM `employee` WHERE (username = ? and password=?) and (role = 'HR' OR role ='DVR')")) {
-			$stmt->bind_param("ss", $username, $password);
-			$stmt->execute();
-			$stmt->close();
-		}
+	if (!empty($username)) {
+		$result=mysqli_prepare($db,"SELECT role FROM `employee` WHERE (username = ? and password=?) and (role = 'HR' OR role ='DVR')");
+		mysqli_stmt_bind_param($result,'ss',$username,$password);
+		mysqli_stmt_execute($result);
+		mysqli_stmt_store_result($result);
+		mysqli_stmt_bind_result($result,$roleID);
 	}
 
-    $row = mysqli_fetch_array($result);
-
-    $count = mysqli_num_rows($result);
+    $count = mysqli_stmt_num_rows($result);
     if ($count == 1) {
-        if ($row[2] == "HR") {
-            $_SESSION['HRLoggedIn'] = "HRLoggedIn";
-            $_SESSION['username'] = $username;
-        } else {
-            $_SESSION['DVRLoggedIn'] = "DVRLoggedIn";
-            $_SESSION['username'] = $username;
-        }
+		while (mysqli_stmt_fetch($result)) {
+			if ($roleID == "HR") {
+				$_SESSION['roleID'] = $roleID;
+				$_SESSION['HRLoggedIn'] = "HRLoggedIn";
+				$_SESSION['username'] = $username;
+
+			} else {
+				$_SESSION['roleID'] = $roleID;
+				$_SESSION['DVRLoggedIn'] = "DVRLoggedIn";
+				$_SESSION['username'] = $username;
+			}
+		}
 
 
         echo "<h2 style='text-align:center;'>Valid Login Credentials</h2>";
