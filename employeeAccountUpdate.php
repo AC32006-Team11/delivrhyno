@@ -16,55 +16,76 @@
     $contact_phone = $_POST["contact_phone"];
     $contact_email = $_POST["contact_email"];
 
+    $currentusr = $_SESSION['username'];
+    $currentrole = $_SESSION['role'];
 
     if (!empty($title)) {
-        $query = "UPDATE `employee` SET title = '$title' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET title = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $title);
+        $stmt->execute();
+        $stmt->close();
     }
 
+
     if (!empty($forename)) {
-        $query = "UPDATE `employee` SET forename = '$forename' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET forename = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $forename);
+        $stmt->execute();
+        $stmt->close();
     }
 
     if (!empty($surname)) {
-        $query = "UPDATE `employee` SET surname = '$surname' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET surname = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $surname);
+        $stmt->execute();
+        $stmt->close();
     }
 
     if (!empty($street)) {
-        $query = "UPDATE `employee` SET street = '$street' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET street = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $street);
+        $stmt->execute();
+        $stmt->close();
     }
 
     if (!empty($county)) {
-        $query = "UPDATE `employee` SET county = '$county' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET county = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $county);
+        $stmt->execute();
+        $stmt->close();
     }
 
     if (!empty($city)) {
-        $query = "UPDATE `employee` SET city = '$city' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
-    }
+        $stmt = $db->prepare("UPDATE `employee` SET city = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $city);
+        $stmt->execute();
+        $stmt->close();    }
 
     if (!empty($post_code)) {
-        $query = "UPDATE `employee` SET post_code = '$post_code' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET post_code = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $post_code);
+        $stmt->execute();
+        $stmt->close();
     }
 
     if (!empty($contact_phone_region)) {
-        $query = "UPDATE `employee` SET contact_phone_region = '$contact_phone_region' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
-    }
+        $stmt = $db->prepare("UPDATE `employee` SET contact_phone_region = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $contact_phone_region);
+        $stmt->execute();
+        $stmt->close();    }
 
     if (!empty($contact_phone)) {
-        $query = "UPDATE `employee` SET contact_phone = '$contact_phone' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET contact_phone = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $contact_phone);
+        $stmt->execute();
+        $stmt->close();
     }
 
     if (!empty($contact_email)) {
-        $query = "UPDATE `employee` SET contact_email = '$contact_email' WHERE username = '$_SESSION[username]' and role = '$_SESSION[role]'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        $stmt = $db->prepare("UPDATE `employee` SET contact_email = ? WHERE username = '$_SESSION[username]' AND role = '$_SESSION[role]'");
+        $stmt->bind_param('s', $contact_email);
+        $stmt->execute();
+        $stmt->close();
     }
 }
 
