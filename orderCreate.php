@@ -70,7 +70,6 @@ if(!empty($_SESSION["city"])) {
                                 echo $rrow[1];
                                 if ($restCount < 2) {
                                     ?>
-                                    <small>(Your Most frequent Restaurant!)</small>
                                     <?php
                                 } else {
                                 }
