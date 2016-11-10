@@ -16,15 +16,22 @@ include('dbConnect.php');
     //$result = mysqli_query($db, $query) or die(mysqli_error($db));
 	
     //$row = mysqli_fetch_array($result);
-	$result=mysqli_prepare($db,'SELECT * FROM `customer` WHERE username =? and password=?') or die(mysqli_error($db));
+	$result=mysqli_prepare($db,'SELECT customer_id FROM `customer` WHERE username =? and password=?') or die(mysqli_error($db));
 	mysqli_stmt_bind_param($result,'ss',$username,$password);
 	mysqli_stmt_execute($result);
 	mysqli_stmt_store_result($result);
+	mysqli_stmt_bind_result($result,$custid);
     $count = mysqli_stmt_num_rows($result);
     if ($count == 1) {
         $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
-		$_SESSION['customerID'] = $row[0];
+	while (mysqli_stmt_fetch($result))
+	{
+		$_SESSION['customerID'] = $custid;
+	}
+	
+		
+		
         echo "<h2 style='text-align:center;'>Valid Login Credentials</h2>";
 		
     } 
