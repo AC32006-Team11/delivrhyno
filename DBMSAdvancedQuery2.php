@@ -10,7 +10,7 @@
     <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2 style="text-align:center;">You have searched for all restauraunts that have <?php echo "$food" ?> on
+            <h2 style="text-align:center;">You have searched for all restaurants that have <?php echo "$food" ?> on
                 their menu in <?php echo "$city" ?></h2>
             <br>
         </div>
