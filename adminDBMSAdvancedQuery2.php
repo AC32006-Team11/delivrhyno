@@ -4,7 +4,7 @@
 	<?php if ( isset($_SESSION["admLoggedIn"]) == "admLoggedIn") { ?>
         <div class="row">
             <div class="col-md-12">
-                <h2 style="text-align:center;">Search for all restaraunts offering a specific menu item in a city</h2>
+                <h2 style="text-align:center;">Search for all restaurants offering a specific menu item in a city</h2>
                 <br>
             </div>
         </div>
