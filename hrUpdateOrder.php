@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 
     <div class="container-fluid">
+<?php if (isset($_SESSION["HRLoggedIn"]) == "HRLoggedIn" or isset($_SESSION["DVRLoggedIn"]) == "DVRLoggedIn") { ?>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
@@ -36,6 +37,9 @@
             </div>
             <div class="col-md-1"></div>
         </div>
+<?php } else {
+    echo '<h2>No User Found</h2>';
+} ?>
     </div>
 
 <?php include 'footer.php'; ?>
