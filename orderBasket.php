@@ -39,7 +39,7 @@ if(isset($_POST['showcart']))
         echo "<td><button class='btn btn-primary' id='removecart$i' value='$i' onclick='removeCart($i)'>Delete Item</button></td></tr></tbody>";
         echo "</div>";
     }
-    echo "</table>";
+    echo "<td><a href=\"orderPayment.php\">Submit your order</a></td></table>";
     exit();
 }
 ?>

@@ -21,6 +21,7 @@ include('dbConnect.php');
     if ($count == 1) {
         $_SESSION['loggedIn'] = "loggedIn";
         $_SESSION['username'] = $username;
+		$_SESSION['customerID'] = $row[0];
         echo "<h2 style='text-align:center;'>Valid Login Credentials</h2>";
 		
     } 
