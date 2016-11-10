@@ -13,7 +13,19 @@ if (isset($_SESSION[""]) == "") {
 	echo "<h2 style='text-align:center;'>Redirecting you to the home page...</h2>";
 	?><script>
     setTimeout(function(){location.href="index.php"} , 3000);
-	</script><?php
+	</script>
+	<div class="container col-md-6 col-md-offset-3">
+		<div class="progress progress-striped active">
+			<div class="progress-bar progress-bar-success" style="width: 0%;">
+				<script>
+					$(".progress-bar").animate({
+						width: "100%"
+					}, 1500 );
+				</script>
+			</div>
+		</div>
+	</div>​
+	<?php
 } else {
     echo "<h2 style='text-align:center;'>No user logged in</h2>";
 } ?>
