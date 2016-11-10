@@ -15,8 +15,13 @@ if (isset($_POST['username']) and isset($_POST['password'])) {
     $passwordInsecure = $_POST["password"];
     $password = sha1($passwordInsecure);
 
-    $query = "SELECT * FROM `employee` WHERE (username = '$username' and password='$password') and (role = 'HR' OR role ='DVR')";
-    $result = mysqli_query($db, $query) or die(mysqli_error($db));
+	if (!empty($transactionID)) {
+		if ($stmt = $db->prepare("SELECT * FROM `employee` WHERE (username = ? and password=?) and (role = 'HR' OR role ='DVR')")) {
+			$stmt->bind_param("ss", $username, $password);
+			$stmt->execute();
+			$stmt->close();
+		}
+	}
 
     $row = mysqli_fetch_array($result);
 

@@ -8,8 +8,11 @@
     $employee_id = $_POST["employee_id"];
 
     if (!empty($transactionID)) {
-        $query = "UPDATE `transaction` SET employee_id = '$employee_id' WHERE transaction_id = '$transactionID'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        if ($stmt = $db->prepare("UPDATE `transaction` SET employee_id = ? WHERE transaction_id = ?")) {
+            $stmt->bind_param("ss", $employee_id, $transactionID);
+            $stmt->execute();
+            $stmt->close();
+        }
     }
 }
 

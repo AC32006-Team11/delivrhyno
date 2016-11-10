@@ -21,24 +21,25 @@ if(isset($_POST['total_cart_items']))
 
 if(isset($_POST['item_id']))
 {
-$_SESSION['id'][]=$_POST['item_id'];
-$_SESSION['name'][]=$_POST['item_name'];
-$_SESSION['price'][]=$_POST['item_price'];
+    $_SESSION['id'][]=$_POST['item_id'];
+    $_SESSION['name'][]=$_POST['item_name'];
+    $_SESSION['price'][]=$_POST['item_price'];
     echo count($_SESSION['name']);
-exit();
+    exit();
 }
 
 if(isset($_POST['showcart']))
 {
-for($i=0;$i<count($_SESSION['id']);$i++)
-{
-echo "<div class='cart_items'>";
-    echo "<b>".$_SESSION['id'][$i]."</b>";
-    echo "<b>".$_SESSION['name'][$i]."</b>";
-    echo "<b>".$_SESSION['price'][$i]."</b>";
-    echo "<input type='button' id='removecart$i' value='$i' onclick='removeCart($i)'>";
-    echo "</div>";
-}
-exit();
+    echo "<table class='table'><thead><tr><th>Item Name</th><th>Item price</th></tr></thead>";
+    for($i=0;$i<count($_SESSION['id']);$i++)
+    {
+        echo "<tbody><tr>";
+        echo "<td>".$_SESSION['name'][$i]."</td>";
+        echo "<td>".$_SESSION['price'][$i]."</td>";
+        echo "<td><button class='btn btn-primary' id='removecart$i' value='$i' onclick='removeCart($i)'>Delete Item</button></td></tr></tbody>";
+        echo "</div>";
+    }
+    echo "<td><a href=\"orderPayment.php\">Submit your order</a></td></table>";
+    exit();
 }
 ?>

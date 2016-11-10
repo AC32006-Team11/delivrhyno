@@ -10,14 +10,17 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") { ?>
                     <thead>
                     <tr>
                         <th>Order ID</th>
-                        <th>Restaurant</th>
                         <th>Ordered From</th>
                         <th>Ordered At</th>
                         <th>Items</th>
                         <th>Total Cost</th>
+                        <th>Address</th>
                     </tr>
                     </thead>
+					<p><?php echo("{$_SESSION['customerID']}"."<br />");?></p>
                 <?php
+					
+					
                     $queryTransaction = "SELECT * FROM transaction WHERE customer_id = '$_SESSION[customerID]'";
                     $resultTransaction = mysqli_query($db, $queryTransaction) or die(mysqli_error($db));
 

@@ -1,6 +1,7 @@
 <?php include 'header.php'; ?>
 
-<?php function updateOrder(){
+<?php function updateOrder()
+{
 
     include 'dbConnect.php';
 
@@ -8,8 +9,11 @@
     $status_desc = $_POST["status_desc"];
 
     if (!empty($transactionID)) {
-        $query = "UPDATE `transaction_status` SET status_description = '$status_desc' WHERE transaction_id = '$transactionID'";
-        $result = mysqli_query($db, $query) or die(mysqli_error($db));
+        if ($stmt = $db->prepare("UPDATE `transaction_status` SET status_description = ? WHERE transaction_id = ?")) {
+            $stmt->bind_param("ss", $status_desc, $transactionID);
+            $stmt->execute();
+            $stmt->close();
+        }
     }
 }
 
