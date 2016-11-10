@@ -29,8 +29,8 @@
     <?php
     if (!empty($city)) {
         $query = "SELECT restaurant_name, menu_item_price
-					FROM restaurant, restaurant_menu_item
-					WHERE menu_item_name = '$food' AND city='$city' ORDER BY menu_item_price ASC;";
+					FROM restaurant r, restaurant_menu_item i
+					WHERE menu_item_name = 'soup' AND city='dundee' AND r.restaurant_id=i.restaurant_id ORDER BY menu_item_price ASC;";
         $result = mysqli_query($db, $query) or die(mysqli_error($db));
         while ($row = mysqli_fetch_array($result)) {
             echo '
