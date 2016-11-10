@@ -1,4 +1,8 @@
 <?php include 'header.php'?>
+<?php
+
+if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") { ?>
+
     <div class="container">
     <div class="row">
     <div class="col-md-12">
@@ -11,4 +15,7 @@
 
 </div></div></div></div>
 
+<?php } else {
+    echo '<h2>You do not appear to be an admin!  Access Denied!</h2>';
+} ?>
 <?php include 'footer.php'?>
