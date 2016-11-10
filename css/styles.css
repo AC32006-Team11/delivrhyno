@@ -1,8 +1,137 @@
 .heading {
     font-family: 'Francois One', sans-serif;
-    font-size: 92px;
+    font-size: 110px;
 }
 
 .heading_image {
     size: auto;
+}
+
+#cart_button {
+    margin-top: 20px;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+#cart_button input[type="button"] {
+    z-index: 1;
+    background: none;
+    border: none;
+    background-color: royalblue;
+    border-radius: 5px;
+    height: 45px;
+    width: 88%;
+    margin-top: 0px;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+#mycart {
+    display: none;
+    background-color: white;
+    width: 800px;
+    margin-left: 100px;
+}
+
+#mycart .cart_items {
+    border-bottom: 1px dashed black;
+}
+
+#mycart .cart_items b {
+    margin: 5px;
+    font-size: 17px;
+    color: Black;
+}
+/* Code for slider altered from original source at: https://www.smashingmagazine.com/2012/04/pure-css3-cycling-slideshow/ */
+#slider {
+    background: black;
+    border: 5px solid lightgrey;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    height: 280px;
+    width: 550px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    position: center;
+}
+
+#mask {
+    overflow: hidden;
+    height: 280px;
+}
+
+#slider ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#slider li {
+    width: 550px;
+    height: 280px;
+    position: absolute;
+    top: -285px; /* Original Position - Outside of the Slider */
+    list-style: none;
+}
+
+#slider li.firstanimation {
+    animation: cycle 10s linear infinite;
+}
+
+#slider li.secondanimation {
+    animation: cycletwo 10s linear infinite;
+}
+
+@keyframes cycle {
+    0% {
+        top: 0px;
+    }
+    25% {
+        top: 0px;
+        opacity: 1;
+    }
+    50% {
+        top: 285px;
+        opacity: 0;
+    }
+    51% {
+        top: -285px;
+        opacity: 0;
+    }
+    75% {
+        top: -285px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes cycletwo {
+    0% {
+        top: -285px;
+        opacity: 0;
+    }
+    25% {
+        top: -285px;
+        opacity: 0;
+    }
+    50% {
+        top: 0px;
+        opacity: 1;
+    }
+    75% {
+        top: 0px;
+        opacity: 1;
+    }
+    100% {
+        top: 285px;
+        opacity: 0;
+    }
+}
+
+.progress.active .progress-bar {
+    -webkit-transition: none !important;
+    transition: none !important;
 }
