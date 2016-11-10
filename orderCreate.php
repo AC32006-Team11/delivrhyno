@@ -67,7 +67,6 @@ if(!empty($_SESSION["city"])) {
                         <div >
                             <h3>
                                 <?php
-                                echo $restCount;
                                 echo $rrow[1];
                                 if ($restCount < 2) {
                                     ?>
