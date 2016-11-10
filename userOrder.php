@@ -10,11 +10,11 @@ if (isset($_SESSION["loggedIn"]) == "loggedIn") { ?>
                     <thead>
                     <tr>
                         <th>Order ID</th>
-                        <th>Restaurant</th>
                         <th>Ordered From</th>
                         <th>Ordered At</th>
                         <th>Items</th>
                         <th>Total Cost</th>
+                        <th>Address</th>
                     </tr>
                     </thead>
                 <?php
