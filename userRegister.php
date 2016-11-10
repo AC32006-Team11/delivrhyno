@@ -20,7 +20,7 @@ function checkUserExists() {
 
     //$count = mysqli_num_rows($result);
 	//
-	$result=mysqli_prepare($db, 'SELECT username FROM `customer` WHERE username = ?');
+	$result=mysqli_prepare($db, 'SELECT username FROM `customer` WHERE username = ?') or die(mysqli_error($db));
 	mysqli_stmt_bind_param($result,'s', $user);
 	mysqli_stmt_execute($result);
 	mysqli_stmt_store_result($result);
