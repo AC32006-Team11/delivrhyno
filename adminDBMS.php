@@ -1,4 +1,10 @@
-<?php include 'header.php'; ?>
+<?php 
+/*
+	adminDBMS.php
+	This PHP method allows the admin to perform functions using the DBMS
+*/
+include 'header.php'; 
+?>
 
 
 

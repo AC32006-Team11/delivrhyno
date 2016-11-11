@@ -1,6 +1,9 @@
 <?php include 'header.php'; ?>
 
 <?php
+/**
+ * Creates a new branch using DBMS.
+ */ 
 function createBranch() {
 
     include 'dbConnect.php';
