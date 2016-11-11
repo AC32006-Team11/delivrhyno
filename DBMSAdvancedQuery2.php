@@ -1,6 +1,10 @@
 <?php include 'header.php'; ?>
 
-<?php function advancedQuery2()
+<?php 
+/**
+ * Displays the results of the second DBMS Advanced MySQL query.
+ */ 
+function advancedQuery2()
 {
 
     include 'dbConnect.php';

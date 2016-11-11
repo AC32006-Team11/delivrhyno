@@ -2,7 +2,10 @@
 <?php include 'dbConnect.php'; ?>
 
 <?php
-
+/*
+	adminAccount.php
+	This PHP method displays all information about the admin account stored in the MySQL database
+*/
 //insert into anthonygrimesdb.employee(branch_id, role, title, forename, surname, street, county, city, post_code, contact_phone_region, contact_phone, contact_email, holiday_entitlement, username, password) VALUES ('', '','','','','','','','','','','','','','')
 if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") {
     $query = "SELECT * FROM `employee` WHERE '$_SESSION[username]' = username and role = 'ADM'";

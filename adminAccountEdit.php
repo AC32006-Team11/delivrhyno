@@ -1,4 +1,10 @@
-<?php include 'header.php'; ?>
+<?php 
+/*
+	adminAccountEdit.php
+	This PHP method allows you to edit any details in the admin account
+*/
+include 'header.php'; 
+?>
 
 <?php if (isset($_SESSION["admLoggedIn"]) == "admLoggedIn") { ?>
 <div class="container">
