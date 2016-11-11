@@ -9,7 +9,7 @@
     if($n > 0) {
         echo "<thead><tr><th>ID</th><th>Role</th>
               <th>Title</th><th>Forename</th><th>Surname</th><th>Street</th>
-              <th>County</th><th>City</th><th>Postcode</th><th>Phone Number</th><th>Phone Number Region</th>
+              <th>County</th><th>City</th><th>Postcode</th><th>Phone Number Region</th><th>Phone Number</th>
               <th>Email Address</th>
               <th>Holiday Entitlement</th></tr></thead>";
         while($row=$result->fetch_assoc()){
