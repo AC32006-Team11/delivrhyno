@@ -2,7 +2,7 @@
 <?php
 if ( isset($_SESSION['restaurantID'])){
     clearBasket();
-    }
+}
 
 ?>
 
@@ -29,67 +29,51 @@ if(!empty($_SESSION["city"])) {
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-10">
-            <?php function clearBasket() {
-                unset($_SESSION['id']);
-                unset($_SESSION['name']);
-                unset($_SESSION['price']);
-
-                echo '<h4>Reset your basket as naviagated to a new page</h4>'; } ?>
-        </div>
-    </div>
-    <div class="row">
-        <div class="Jumbotron">
-
-            <h2>Welcome to delivrhyno.  Your region: <?php echo $_SESSION['city'] ?></h2>
-            <p></p>
-        </div>
-        <br/>
+    <div class="container">
         <div class="row">
-            <?php
-            $restCount = 1;
-            while($rrow = mysqli_fetch_array($rresult)){
-                ?>
-                <div class="col-md-6 col-md-6">
-                    <div class="thumbnail"
-                        <?php
-                        if ($restCount < 2) {
-                            ?>
+            <div class="col-md-10">
+                <?php function clearBasket() {
+                    unset($_SESSION['id']);
+                    unset($_SESSION['name']);
+                    unset($_SESSION['price']);
 
-                            <?php
-                        } else {
-                        }
-                        ?>
-                    >
-                        <img src="assets/restaurant1.jpg" style="padding:15px;">
-                        <div >
-                            <h3>
-                                <?php
-                                echo $rrow[1];
-                                if ($restCount < 2) {
-                                    ?>
+                    echo '<h4 style="text-align:center;">Your basket is currently empty</h4>'; } ?>
+            </div>
+        </div>
+        <div class="row">
+            <div class="Jumbotron">
+
+                <h2>Welcome to delivrhyno.  Your region: <?php echo $_SESSION['city'] ?></h2>
+                <p></p>
+            </div>
+            <br/>
+            <div class="row">
+                <?php
+                $restCount = 1;
+                while($rrow = mysqli_fetch_array($rresult)){
+                    ?>
+                    <div class="col-md-6 col-md-6">
+                        <div class="thumbnail">
+                            <img src="assets/restaurant1.jpg" style="padding:15px;">
+                            <div >
+                                <h3>
                                     <?php
-                                } else {
-                                }
-                                ?>
-                            </h3>
-                            <p>
-                                <?php echo $rrow[2]; ?>
-                            </p>
-                            <p>
-                                <?php echo '<a href="orderSelection.php?r='.$rrow[0].'">Order Here</a>'?>
-                            </p>
+                                    echo $rrow[1]; ?>
+                                </h3>
+                                <p>
+                                    <?php echo $rrow[2]; ?>
+                                </p>
+                                <p>
+                                    <?php echo '<a href="orderSelection.php?r='.$rrow[0].'">Order Here</a>'?>
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <?php
-                $restCount++;
-                $isdelivered = 1;
-            }
-            ?>
+                    <?php
+                    $restCount++;
+                }
+                ?>
+            </div>
         </div>
     </div>
-</div>
 <?php include 'footer.php'; ?>
